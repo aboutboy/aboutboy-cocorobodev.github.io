@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
     <meta charset="UTF-8">
-    <title>Website Under Construction</title>
+    <title>CocoRobo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=9, IE=edge" />
     <meta name='robots' content='noindex,follow' />
@@ -19,16 +19,565 @@
     <!-- <link rel="stylesheet" href="assets/css/additional/reset.css"> -->
     <link rel="stylesheet" href="assets/css/additional/style.css">
     <style>
+	
+	/* For Demo Purposes Only ( You can delete this anytime :-) */
+	#colour-variations {
+		padding: 10px;
+		-webkit-transition: 0.5s;
+	  	-o-transition: 0.5s;
+	  	transition: 0.5s;
+		width: 140px;
+		position: fixed;
+		left: 0;
+		top: 100px;
+		z-index: 999999;
+		background: #fff;
+		/*border-radius: 4px;*/
+		border-top-right-radius: 4px;
+		border-bottom-right-radius: 4px;
+		-webkit-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		-moz-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		-ms-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+	}
+	#colour-variations.sleep {
+		margin-left: -140px;
+	}
+	#colour-variations h3 {
+		text-align: center;;
+		font-size: 11px;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		color: #777;
+		margin: 0 0 10px 0;
+		padding: 0;;
+	}
 
-    </style>   
+	#colour-variations ul,
+	#colour-variations ul li {
+		padding: 0;
+		margin: 0;
+	}
+	#colour-variations ul {
+		float: left;	
+	}
+	#colour-variations li {
+		list-style: none;
+		display: inline;
+	}
+	#colour-variations li a {
+		width: 20px;
+		height: 20px;
+		position: relative;
+		float: left;
+		margin: 5px;
+	}
+
+
+
+	#colour-variations li a[data-theme="../assets/css/new-style-blue"] {
+		background: #0785f2;
+	}
+	#colour-variations li a[data-theme="../assets/css/new-style-green"] {
+		background: #6e85c1;
+	}
+	#colour-variations li a[data-theme="../assets/css/new-style-yellow"] {
+		background: #9261d4;
+	}
+	#colour-variations li a[data-theme="../assets/css/new-style-red"] {
+		background: #f25454;
+	}
+	#colour-variations li a[data-theme="../assets/css/new-style-orange"] {
+		background: orange;
+	}
+
+	.option-toggle {
+		position: absolute;
+		right: 0;
+		top: 0;
+		margin-top: 5px;
+		margin-right: -30px;
+		width: 30px;
+		height: 30px;
+		background: #fff;
+		text-align: center;
+		border-top-right-radius: 4px;
+		border-bottom-right-radius: 4px;
+		color: #0785f2;
+		cursor: pointer;
+		-webkit-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		-moz-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		-ms-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+	}
+	.option-toggle i {
+		top: 5px;
+		position: relative;
+	}
+	.option-toggle:hover, .option-toggle:focus, .option-toggle:active {
+		color:  #0785f2;
+		text-decoration: none;
+		outline: none;
+	}
+    .fa-2x {
+    font-size: 1.5em;
+    }
+
+    .menu-primary-menu-container { font-family: 'Poppins';font-weight: 700; } 
+	</style>
+	<!-- End demo purposes only -->     
 </head>
     
 <body>
-<div style="padding:100px 50px;font-size:30px;font-family:Poppins;font-weight:700;background-color:#f4c400;color:#222;text-align:center;" class="flex fadeInUp animated">UNDER CONSTRUCTION</div>
+    <div class="hero-image">
+        <div id="home">
+            <div style="padding-top:50px;" class="hero-overlay">
+                <header id="site-header">
+                    <div class="row">
+                        <nav id="top-nav" class="navbar navbar-default navbar-fixed-top navbar-scroll-changed">
+                              
+                          <div class="container">
+
+                            <div class="col-md-2 col-sm-1 col-xs-12">
+                                    <div class="branding">
+                                      <a href="#" title="Home is where the heart is" rel="home"><img id="logo" src="assets/images/flexible-logo.png" alt="Home is where the heart is"></a>
+                                    </div><!--end branding-->
+                                
+                                    <div class="navbar-header">
+                                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                            <span class="sr-only">Toggle navigation</span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                        </button>
+                                    </div><!--end navbar-header-->
+                            </div><!--end col-md-2 col-sm-2 col-xs-12-->
+
+                            <div class="col-md-10 col-sm-11 col-xs-12">
+                                <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" aria-expanded="true" style="height: 1px;" role="navigation"> 
+                                    <div class="menu-primary-menu-container">
+                                        <ul id="menu-main-top-navigation" class="menu nav navbar-nav navbar-right">
+                                            <li><a href="#about">关于 COCOROBO</a></li>
+                                            <li style="font-weight:bolder;font-family:'Hiragino Sans GB';"><a href="#products">产品</a></li>
+                                            <li style="font-weight:bolder;font-family:'Hiragino Sans GB';"><a href="#applications">应用</a></li>
+                                            <li style="font-weight:bolder;font-family:'Hiragino Sans GB';"><a href="#education">教育</a></li>
+                                            <li style="font-weight:bolder;font-family:'Hiragino Sans GB';"><a href="#outlook">展望</a></li>
+                                            <li style="font-weight:bolder;font-family:'Hiragino Sans GB';"><a href="#team">团队</a></li>
+                                        </ul>
+                                    </div><!--end menu-->
+                                </div><!--end navbar-collapse--> 
+
+                             </div><!--end col-md-10 col-sm-10 col-xs-12--> 
+                              
+                            </div><!--end container-->
+                        </nav>
+                           
+                            </div><!--end row-->
+                        <div class="main-message">  
+                            <div class="container">
+                                <h1 style="font-weight: 800;" class="flex fadeInUp animated">MAKE<br>FOR FUN</h1>
+                                <p class="description-image flex fadeInUp animated">
+                                  「为乐趣而创造」
+                                </p>
+                                <a class="btn btn-cta-primary btn-cta-blue flex" href="#about" role="button">了解更多</a>
+                            </div><!--end container-->                         
+                        </div><!--end main-message--> 
+                    </header>
+                </div><!--end hero-overlay-->
+            </div><!--end acasa-->
+         </div><!--end hero-image--> 
+
+
+        <section id="about">        
+            <div class="zig-zag container">
+                <div class="row">
+                    <div class="title">
+                <h2 class="flex">关于 CocoRobo</h2>
+                <p style="line-height:2em;color:#444;padding-top:20px;" class="description flex  ">CocoRobo 是一家专注于 STEAM （科学，技术，工程，艺术，数学）<br/>的教育科技公司（EdTech）</p>
+            </div><!--end title-->
+            <hr style="width:500px;" />
+            <div class="title">
+                <h2 class="flex">Timeline</h2>
+            </div><!--end title-->
+
+            <div style="font-size: 62.5%;margin: 0; padding: 0; border: 0;font-size: 100%;font: inherit;vertical-align: baseline;display: block;line-height: 1;font-family: "Fira Sans", sans-serif; color: #383838;" class="cd-horizontal-timeline">
+            <div class="timeline">
+                <div class="events-wrapper">
+                    <div class="events">
+                <ol style="list-style-type: none;">
+                    <li><a href="#0" data-date="01/01/1985" class="selected">1985</a></li>
+                    <li><a href="#0" data-date="01/01/1995">1995</a></li>
+                    <li><a href="#0" data-date="01/01/2005">2005</a></li>
+                    <li><a href="#0" data-date="01/01/2015">2015</a></li>
+                    <li><a href="#0" data-date="01/01/2016">2016</a></li>
+                    <li><a href="#0" data-date="01/07/2016  ">现在</a></li>
+                </ol>
+
+                <span class="filling-line" aria-hidden="true"></span>
+            </div> <!-- .events -->
+        </div> <!-- .events-wrapper -->
+            
+        <ul class="cd-timeline-navigation">
+            <li><a href="#0" class="prev inactive">Prev</a></li>
+            <li><a href="#0" class="next">Next</a></li>
+        </ul> <!-- .cd-timeline-navigation -->
+    </div> <!-- .timeline -->
+
+    <div class="events-content">
+        <ol style="list-style-type: none;">
+            <li class="selected" data-date="01/01/1985">
+                <h2>Personal Computer</h2>
+                <em>80s, 20 Century</em>
+                <p id="cd-p-smaller"> 
+                    个人电脑的诞生，使它成为普通人能用的产品
+                </p>
+            </li>
+
+            <li data-date="01/01/1995">
+                <h2>Birth of the Internet</h2>
+                <em>90s, 20 Century</em>
+                <p id="cd-p-smaller"> 
+                    互联网的出现，让人们与世界连结起来
+                </p>
+            </li>
+
+            <li data-date="01/01/2005">
+                <h2>3D Printing</h2>
+                <em>21 Century</em>
+                <p id="cd-p-smaller"> 
+                    第一款开源桌面 3D 打印机 — RepRap
+                </p>
+            </li>
+
+            <li data-date="01/01/2015">
+                <h2>Augemented Reality</h2>
+                <em>Year 2015</em>
+                <p id="cd-p-smaller"> 
+                    微软公司推出了跨时代的增强现实产品 — Hololens
+                </p>
+            </li>
+
+            <li data-date="01/01/2016">
+                <h2>Virtual Reality</h2>
+                <em>Year 2016</em>
+                <p id="cd-p-smaller"> 
+                    将VR和AR作为他们十年计划中的另一个重头戏
+                </p>
+            </li>
+
+            <li data-date="01/07/2016">
+                <h2>Anything is Possible</h2>
+                <em>Modern Society</em>
+                <p id="cd-p-smaller"> 
+                    随着人工智能、机器人、增强现实、3D打印等新技术的发展，新的技术和设备正在代替人类解决越来越多难题，完成更多专业性的精细工作，改变了我们与世界的交互方式。生产环节中按部就班和机械模仿将逐渐被智能机器所取代，而无法被取代的将是人区别于机器独有的创造力和对新知的探求利用。
+                </p>
+            </li>
+        </ol>
+        </div> <!-- .events-content -->
+        </div>
+        </section><!--end info-->
+
+        <!-- <section style="margin-bottom:100px;margin-top:-20px;" id="about" class="marketing-action">
+            <div class="overlay">
+                <div class="text">
+                     <h2 style="color:#fff;line-height:2em;" class="flex  ">大约每隔十五年左右，就会迎来一次技术与社会的碰撞</h2>
+                     <!--<p style="padding-bottom:25px;" class="description-image flex  ">
+                        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                     </p>
+                     <a href="#home" class="btn btn-cta-primary btn-cta-buy" role="button">Go to Top</a>   
+                </div>
+            </div>
+        </section>-->
+            
+            <section style="margin-bottom:100px;margin-top:0px;" id="contact" class="marketing-action">
+                <div class="overlay">
+                    <div class="text">
+                     <h2 style="color:#fff;" class="flex  ">我们怎么做？</h2>
+                     <p style="padding:2em 4em;line-height:2em;" class="description-image flex  ">
+                        我们通过融合3D打印技术，模块化的硬件/软件设计，增强现实技术，来打造一系列多元化，创新型，寓教于乐的套件产品。
+                     </p>     
+                    </div><!--end text-->   
+                </div><!--end overlay-->    
+            </section><!--end marketing-action-->
+
+            <section id="products" class="container">
+                <div class="row">
+                    <div class="title">
+                        <h2 class="flex  ">Products</h2>
+                        <p class="description flex  ">Cras Ligula Vulputate Magna Fusce.</p>
+                    </div><!--end title-->
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-sm-6 caption flex   animated" data-wow-delay="0.1s">
+                                <a href="#" title=""><img src='assets/images/phones.jpg' class="serv" alt="Cursuri" /></a>    
+                                <a href="#" title=""><h4 style="padding-top:50px;">Ridiculus Elit Ipsum</h4></a>
+                                <p>Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus.</p>
+                                <a href="#" title="See more" class="more">See more &nbsp;<i class="fa fa-angle-right"></i></a>
+                            </div><!--end col-sm-6-->
+
+                            <div class="col-sm-6 caption flex   animated" data-wow-delay="0.2s">
+                                <a href="#" title=""><img src='assets/images/chair.jpg' class="serv" alt="Cursuri" /></a>
+                                <a href="#" title=""><h4 style="padding-top:50px;">Vulputate Lorem</h4></a>
+                                <p>Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus.</p>
+                                <a href="#" title="See more" class="more">See more &nbsp;<i class="fa fa-angle-right"></i></a>
+                            </div><!--end col-sm-6-->
+                        </div><!--end row-->
+                    </div><!--end col-md-6-->
+
+
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-sm-6 caption flex   animated" data-wow-delay="0.3s">
+                                <a href="#" title=""><img src='assets/images/camera-photos.jpg' class="serv" alt="Cursuri" /></a>
+                                <a href="#" title=""><h4 style="padding-top:50px;">Fusce Vehicula Pharetra</h4></a>
+                                <p>Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus.</p>
+                                <a href="#" title="See more" class="more">See more &nbsp;<i class="fa fa-angle-right"></i></a>
+                            </div><!--end col-sm-6-->
+
+                            <div class="col-sm-6 caption flex   animated" data-wow-delay="0.4s">
+                                <a href="#" title=""><img src='assets/images/brochure.jpg' class="serv" alt="Cursuri" /></a>
+                                <a href="#" title=""><h4 style="padding-top:50px;">Adipiscing Tortor Sem</h4></a>
+                                <p>Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus.</p>
+                                <a href="#" title="See more" class="more">See more&nbsp;<i class="fa fa-angle-right"></i></a>
+                            </div><!--end col-sm-6-->
+                        </div><!--end row-->
+                    </div><!--end col-md-6-->
+                </div><!--end row-->
+            </section><!--end services-->  
+            
+    <section id="applications">
+        <div class="container">
+            <div class="title">
+                <h2 class="flex">应用场景</h2>
+                <p class="description flex  ">结合我们的套件产品，我们开发了一系列有趣的应用。我们希望可以通过这些应用不断地激发孩子们对技术的兴趣和热情，早早埋下创新的种子。</p>
+            </div><!--end title-->
+
+            <div style="padding-bottom:25px;" class="title"><h4 style="border-radius:5px;font-weight:bolder;color:#fff;background-color:rgba(0,146,255,1);padding:1em;" class="flex">桌面版应用</h4></div>
+           
+                <div class="row">
+                    <div class="col-md-4 caption flex   animated" data-wow-delay="0.1s">
+                        <i class="fa fa-paint-brush"></i>
+                        <h3>Cocoduino</h3>
+                        <p>这是一款桌面版的APP，兼容当今世界最流行的Arduino开发环境，丰富的资源和技术支持，适合14岁以上儿童。</p>          
+                    </div><!--end col-md-4-->    
+                
+                <div class="col-md-4 caption flex   animated" data-wow-delay="0.3s">
+                        <i class="fa fa-coffee"></i>
+                        <h3>Coco Scratch</h3>
+                        <p>一款图形化编程平台，敲击一下鼠标便能完成一个简单的项目，适合8-16岁儿童。</p>          
+                </div><!--end col-md-4-->    
+                
+                <div class="col-md-4 caption flex   animated" data-wow-delay="0.5s">
+                    <i class="fa fa-keyboard-o"></i>
+                        <h3>Coco Leap Motion</h3>
+                        <p>这是一款桌面版的APP，通过它来实现Leap motion对机器人的控制，完成更多有趣好玩的操作。</p>         
+                </div><!--end col-md-4-->   
+
+            </div><!--end row-->
+
+                <div style="padding-bottom:25px;" class="title"><h4 style="border-radius:5px;font-weight:bolder;color:#fff;background-color:#007fff;padding:1em;" class="flex">移动版应用</h4></div>
+           
+                <div class="row">
+                    <div class="col-md-4 caption flex   animated" data-wow-delay="0.1s">
+                        <i class="fa fa-paint-brush"></i>
+                        <h3>Coco Playground</h3>
+                        <p>这是一款结合AR技术的趣味性编程手机APP，借助实体的积木以及屏幕上的动画，引导小朋友去学习和理解编程，适合6-10岁儿童。</p>          
+                    </div><!--end col-md-4-->    
+                
+                <div class="col-md-4 caption flex   animated" data-wow-delay="0.3s">
+                        <i class="fa fa-coffee"></i>
+                        <h3>Coco Go</h3>
+                        <p>这是一款用于控制机器人运动的手机APP，支持多达4路电机和12路舵机的控制，同时可以通过预编程的方式为每款机器人设定各自的运动学算法。</p>          
+                </div><!--end col-md-4-->    
+                
+                <div class="col-md-4 caption flex   animated" data-wow-delay="0.5s">
+                    <i class="fa fa-keyboard-o"></i>
+                        <h3>Coco Battle</h3>
+                        <p>这是一款结合AR技术的趣味性游戏APP，支持多达3位用户，6台机器人的对战平台，让小朋友可以玩中学。</p>         
+                </div><!--end col-md-4-->   
+
+            </div><!--end row-->
+            <div class="row">
+                    <div class="col-md-4 caption flex   animated" data-wow-delay="0.1s">
+                        <i class="fa fa-paint-brush"></i>
+                        <h3>Coco Music</h3>
+                        <p>这是一款跟音乐套件配合使用的手机APP，内置多款电子乐器，如钢琴，吉他，架子鼓等。</p>          
+                    </div><!--end col-md-4-->    
+                
+                <div class="col-md-4 caption flex   animated" data-wow-delay="0.3s">
+                        <i class="fa fa-coffee"></i>
+                        <h3>Coco Blink</h3>
+                        <p>这是一款跟灯光套件配合使用的手机APP，可以用它来控制LED点阵屏的亮度，颜色，图案，以及进行趣味性互动。</p>          
+                </div><!--end col-md-4-->    
+                
+                <div class="col-md-4 caption flex   animated" data-wow-delay="0.5s">
+                    <i class="fa fa-keyboard-o"></i>
+                        <h3>Coco Hub</h3>
+                        <p>这是一款跟物联网套件配合使用的手机APP，用它可以实时汇总和监测传感器上的信息，并且可以用过编程的方式实现多个传感器节点之前的互动。</p>         
+                </div><!--end col-md-4-->  
+            </div>
+
+            </div><!--end container-->
+        </section> 
+         
+        <section id="education">        
+            <div class="zig-zag container">
+                <div class="row">
+                    <div class="title">
+                <h2 class="flex  ">教育</h2>
+                <p style="line-height:2em;" class="description flex  ">我们提供一站式的STEAM教育解决方案，包括课程开发、课程传授、实验室设计、套件提供、知识内容提供等。我们坚信，科学教育在教会学生科学知识的同时，能够最好地鼓励学生的好奇心，激发探索欲望，培养良好的学习习惯。</p>
+            </div><!--end title-->
+                    <div class="col-md-6">
+                        <img src='assets/images/akita.jpg' class="serv flex   animated" alt="Flexible" />
+                    </div><!--end col-md-7-->
+                    
+                    <div class="col-md-5 col-md-push-1">
+                        <h2 class="flex   animated">针对学校</h2>
+                        <div class="flex   animated">
+                            <ul>
+                            <li>课程开发和传授</li>
+                            <li>培训和技术支持</li>
+                            <li>创建STEAM实验室</li>
+                            <li>社区</li>
+                            </ul>
+                        </div>
+                    </div><!--end col-md-5--> 
+                    
+                </div><!--end row-->
+            </div><!--end zig-zag-->
+            
+            <div class="zig-zag container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <h2 class="flex   animated">针对个人</h2>
+                        <div class="flex   animated">
+                            <ul>
+                            <li>社区支持</li>
+                            <li>完备的课程</li>
+                            </ul>
+                        </div>
+                    </div><!--end col-md-5--> 
+                    
+                    <div class="col-md-6 col-md-offset-1">
+                        <img src='assets/images/lens.jpg' class="serv flex flipInX animated" alt="Flexible" />
+                    </div><!--end col-md-5-->
+                    
+                </div><!--end row-->
+            </div><!--end zig-zag-->
+        </section><!--end info-->
+
+        <section id="team">
+            <div style="padding-bottom:100px;" class="container">
+                    <div class="title">
+                        <h2 class="flex   animated">Team</h2>
+                        <p class="description flex   animated">Pharetra Nibh Dapibus Magna</p>
+                    </div><!--end title-->
+            
+                    <div class="row"> 
+                        <div class="col-md-6">
+                            <div class="row">    
+                                <div class="price-table col-sm-6 flex  " data-wow-delay="0.1s">
+                                    <i class="fa fa-user"></i>
+                                    <h6>Chief Executive Officer</h6>
+                                    <span class="price">Tony</span>
+
+                                    <ul class="features">
+                                        <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum.</li>
+                                    </ul>
+                                </div><!--price-table-->
+
+                                <div class="price-table col-sm-6 flex  " data-wow-delay="0.3s">
+                                    <i class="fa fa-user"></i>
+                                    <h6>Chief Marketing Officer</h6>
+                                    <span class="price">Syan</span>
+
+                                    <ul class="features">
+                                        <li>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
+                                    </ul>
+                                </div><!--price-table-->
+                                
+                            </div><!--end row-->    
+                        </div><!--end col-sm-6-->        
+        
+
+
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="price-table col-sm-6 flex  " data-wow-delay="0.5s">
+                                    <i class="fa fa-user"></i>
+                                    <h6>Mechanical Engineer</h6>
+                                    <span class="price">Conan</span>
+
+                                    <ul class="features">
+                                        <li>Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.amet fermentum.amet fermentum.</li>
+                                    </ul>
+
+                                </div><!--price-table-->
+
+                                <div class="price-table col-sm-6 flex  " data-wow-delay="0.7s">
+                                    <i class="fa fa-user"></i>
+                                    <h6>Chief Design Officer</h6>
+                                    <span class="price">POS</span>
+
+                                    <ul class="features">
+                                        <li>Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.amet fermentum.amet..</li>
+                                    </ul>
+                                </div><!--price-table-->
+                            </div><!--end row--> 
+                        </div><!--end col-sm-6-->        
+
+                    
+                </div><!--end row-->
+            </div><!--end container-->                                       
+        </section><!--end plan-->     
+
+        <section id="contact" class="marketing-action">
+            <div class="overlay">
+                <div class="text">
+                     <h2 style="color:#fff;" class="flex  ">The Future of Maker Education is Now</h2>
+                     <p style="padding-bottom:25px;" class="description-image flex  ">
+                        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                     </p>
+                     <a href="#home" class="btn btn-cta-primary btn-cta-buy" role="button">Go to Top</a>      
+                </div><!--end text-->   
+            </div><!--end overlay-->    
+        </section><!--end marketing-action-->
+                                           
+
+       <div id="footer">                                      
+       <div class="container">
+            <div class="row">
+                    <div class="footer-section col-md-1">
+                        <a href="#" title="Home is where the heart is" rel="home"><img src='assets/images/flexible-logo-footer.png' class="logo-footer flex  " alt="Home is where the heart is"></a>
+                    </div><!--end footer-section-->
+                    
+                    <div class="footer-section col-md-8 col-sm-9 col-xs-12">
+                            <p class="copyright flex  ">&#169; Copyright 2016 <strong>CocoRobo.</strong>&nbsp;All rights reserved.</p>
+                    </div><!--end footer-section-->
+                        
+                        
+                    <!-- <div class="footer-section col-md-3 col-xs-12">    
+                        <div class="social copyright flex  ">
+                            <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+                            <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
+                            <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>  -->
+            </div><!--end row-->
+        </div><!--end container-->
+        </div><!--end footer-->
+	<!-- End demo purposes only -->
+
 
 <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js?ver=1.0'></script>
+<script type='text/javascript' src='assets/js/bootstrap.min.js'></script>
+<!--<script type='text/javascript' src='assets/js/jquery-mobile.js?ver=1.0'></script>-->
 <script type='text/javascript' src="assets/js/wow.min.js"></script>
 <script type='text/javascript' src="assets/js/main.js"></script>
+<script type='text/javascript' src="assets/js/additional/modernizr.js"></script> <!-- Modernizr -->
+<script type='text/javascript' src="assets/js/additional/jquery-2.1.4.js"></script>
+<script type='text/javascript' src="assets/js/additional/jquery.mobile.custom.min.js"></script>
+<script type='text/javascript' src="assets/js/additional/main.js"></script> <!-- Resource jQuery -->
 <script>
 //jQuery transitions init(wow + animated)
 wow = new WOW(
