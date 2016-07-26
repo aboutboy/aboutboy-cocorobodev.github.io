@@ -13,8 +13,16 @@
 		<link rel="stylesheet" type="text/css" href="css/demo.css" />
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
 		<script src="js/modernizr.custom.js"></script>
+		<script>
+			var beepOne = $("#my")[0];
+$("body a")
+	.mouseenter(function() {
+		beepOne.play();
+	});
+		</script>
 	</head>
 	<body class="demo-1">
+
 		<main>
 			<header class="codrops-header">
 				<h1>CocoMod</h1>
@@ -27,9 +35,14 @@
 				</button>
 			</header>
 			<div class="isolayer isolayer--scroll1">
+				<audio autoplay>
+			<source src="ding.mp3"></source>
+			<source src="ding.ogg"></source>
+			Your browser isn't invited for super fun audio time.
+		</audio>
 				<ul class="grid grid--effect-flip">
 					<li class="grid__item">
-						<a class="grid__link" href="#">
+						<a class="grid__link" href="#my">
 							<img class="grid__img layer" src="img/canvas.png" alt="Canvas Dummy" />
 							<img class="grid__img layer" src="img/wireframe.png" alt="Wireframe Dummy" />
 							<img class="grid__img layer" src="img/Dribbble1/3.png" alt="01" />
@@ -80,7 +93,7 @@
 						<a class="grid__link" href="#">
 							<img class="grid__img layer" src="img/canvas.png" alt="Canvas Dummy" />
 							<img class="grid__img layer" src="img/Dribbble1/3.png" alt="Wireframe Dummy" />
-							<img class="grid__img layer" src="img/Dribbble1/2.png" alt="031" />
+							<img class="grid__img layer" src="img/Dribbble1/4.png" alt="031" />
 							<span class="grid__title">More</span>
 						</a>
 					</li>
@@ -88,7 +101,7 @@
 						<a class="grid__link" href="#">
 							<img class="grid__img layer" src="img/canvas.png" alt="Canvas Dummy" />
 							<img class="grid__img layer" src="img/Dribbble1/3.png" alt="Wireframe Dummy" />
-							<img class="grid__img layer" src="img/Dribbble1/2.png" alt="04" />
+							<img class="grid__img layer" src="img/Dribbble1/4.png" alt="04" />
 							<span class="grid__title">More</span>
 						</a>
 					</li>
@@ -96,7 +109,7 @@
 						<a class="grid__link" href="#">
 							<img class="grid__img layer" src="img/canvas.png" alt="Canvas Dummy" />
 							<img class="grid__img layer" src="img/Dribbble1/3.png" alt="Wireframe Dummy" />
-							<img class="grid__img layer" src="img/Dribbble1/2.png" alt="012" />
+							<img class="grid__img layer" src="img/Dribbble1/4.png" alt="012" />
 							<span class="grid__title">More</span>
 						</a>
 					</li>
@@ -162,7 +175,7 @@
 						<a class="grid__link" href="#">
 							<img class="grid__img layer" src="img/canvas.png" alt="Canvas Dummy" />
 							<img class="grid__img layer" src="img/Dribbble1/3.png" alt="Wireframe Dummy" />
-							<img class="grid__img layer" src="img/Dribbble1/2.png" alt="031" />
+							<img class="grid__img layer" src="img/Dribbble1/4.png" alt="031" />
 							<span class="grid__title">More</span>
 						</a>
 					</li>
@@ -170,7 +183,7 @@
 						<a class="grid__link" href="#">
 							<img class="grid__img layer" src="img/canvas.png" alt="Canvas Dummy" />
 							<img class="grid__img layer" src="img/Dribbble1/3.png" alt="Wireframe Dummy" />
-							<img class="grid__img layer" src="img/Dribbble1/2.png" alt="04" />
+							<img class="grid__img layer" src="img/Dribbble1/4.png" alt="04" />
 							<span class="grid__title">More</span>
 						</a>
 					</li>
@@ -178,7 +191,7 @@
 						<a class="grid__link" href="#">
 							<img class="grid__img layer" src="img/canvas.png" alt="Canvas Dummy" />
 							<img class="grid__img layer" src="img/Dribbble1/3.png" alt="Wireframe Dummy" />
-							<img class="grid__img layer" src="img/Dribbble1/2.png" alt="012" />
+							<img class="grid__img layer" src="img/Dribbble1/4.png" alt="012" />
 							<span class="grid__title">More</span>
 						</a>
 					</li>
@@ -242,7 +255,7 @@
 						<a class="grid__link" href="#">
 							<img class="grid__img layer" src="img/canvas.png" alt="Canvas Dummy" />
 							<img class="grid__img layer" src="img/Dribbble1/3.png" alt="Wireframe Dummy" />
-							<img class="grid__img layer" src="img/Dribbble1/2.png" alt="031" />
+							<img class="grid__img layer" src="img/Dribbble1/4.png" alt="031" />
 							<span class="grid__title">More</span>
 						</a>
 					</li>
@@ -250,7 +263,7 @@
 						<a class="grid__link" href="#">
 							<img class="grid__img layer" src="img/canvas.png" alt="Canvas Dummy" />
 							<img class="grid__img layer" src="img/Dribbble1/3.png" alt="Wireframe Dummy" />
-							<img class="grid__img layer" src="img/Dribbble1/2.png" alt="04" />
+							<img class="grid__img layer" src="img/Dribbble1/4.png" alt="04" />
 							<span class="grid__title">More</span>
 						</a>
 					</li>
@@ -258,7 +271,7 @@
 						<a class="grid__link" href="#">
 							<img class="grid__img layer" src="img/canvas.png" alt="Canvas Dummy" />
 							<img class="grid__img layer" src="img/Dribbble1/3.png" alt="Wireframe Dummy" />
-							<img class="grid__img layer" src="img/Dribbble1/2.png" alt="012" />
+							<img class="grid__img layer" src="img/Dribbble1/4.png" alt="012" />
 							<span class="grid__title">More</span>
 						</a>
 					</li>
@@ -322,7 +335,7 @@
 						<a class="grid__link" href="#">
 							<img class="grid__img layer" src="img/canvas.png" alt="Canvas Dummy" />
 							<img class="grid__img layer" src="img/Dribbble1/3.png" alt="Wireframe Dummy" />
-							<img class="grid__img layer" src="img/Dribbble1/2.png" alt="031" />
+							<img class="grid__img layer" src="img/Dribbble1/4.png" alt="031" />
 							<span class="grid__title">More</span>
 						</a>
 					</li>
@@ -330,7 +343,7 @@
 						<a class="grid__link" href="#">
 							<img class="grid__img layer" src="img/canvas.png" alt="Canvas Dummy" />
 							<img class="grid__img layer" src="img/Dribbble1/3.png" alt="Wireframe Dummy" />
-							<img class="grid__img layer" src="img/Dribbble1/2.png" alt="04" />
+							<img class="grid__img layer" src="img/Dribbble1/4.png" alt="04" />
 							<span class="grid__title">More</span>
 						</a>
 					</li>
@@ -338,7 +351,7 @@
 						<a class="grid__link" href="#">
 							<img class="grid__img layer" src="img/canvas.png" alt="Canvas Dummy" />
 							<img class="grid__img layer" src="img/Dribbble1/3.png" alt="Wireframe Dummy" />
-							<img class="grid__img layer" src="img/Dribbble1/2.png" alt="012" />
+							<img class="grid__img layer" src="img/Dribbble1/4.png" alt="012" />
 							<span class="grid__title">More</span>
 						</a>
 					</li>
@@ -402,7 +415,7 @@
 						<a class="grid__link" href="#">
 							<img class="grid__img layer" src="img/canvas.png" alt="Canvas Dummy" />
 							<img class="grid__img layer" src="img/Dribbble1/3.png" alt="Wireframe Dummy" />
-							<img class="grid__img layer" src="img/Dribbble1/2.png" alt="031" />
+							<img class="grid__img layer" src="img/Dribbble1/4.png" alt="031" />
 							<span class="grid__title">More</span>
 						</a>
 					</li>
@@ -410,7 +423,7 @@
 						<a class="grid__link" href="#">
 							<img class="grid__img layer" src="img/canvas.png" alt="Canvas Dummy" />
 							<img class="grid__img layer" src="img/Dribbble1/3.png" alt="Wireframe Dummy" />
-							<img class="grid__img layer" src="img/Dribbble1/2.png" alt="04" />
+							<img class="grid__img layer" src="img/Dribbble1/4.png" alt="04" />
 							<span class="grid__title">More</span>
 						</a>
 					</li>
@@ -418,7 +431,7 @@
 						<a class="grid__link" href="#">
 							<img class="grid__img layer" src="img/canvas.png" alt="Canvas Dummy" />
 							<img class="grid__img layer" src="img/Dribbble1/3.png" alt="Wireframe Dummy" />
-							<img class="grid__img layer" src="img/Dribbble1/2.png" alt="012" />
+							<img class="grid__img layer" src="img/Dribbble1/4.png" alt="012" />
 							<span class="grid__title">More</span>
 						</a>
 					</li>
@@ -482,7 +495,7 @@
 						<a class="grid__link" href="#">
 							<img class="grid__img layer" src="img/canvas.png" alt="Canvas Dummy" />
 							<img class="grid__img layer" src="img/Dribbble1/3.png" alt="Wireframe Dummy" />
-							<img class="grid__img layer" src="img/Dribbble1/2.png" alt="031" />
+							<img class="grid__img layer" src="img/Dribbble1/4.png" alt="031" />
 							<span class="grid__title">More</span>
 						</a>
 					</li>
@@ -490,7 +503,7 @@
 						<a class="grid__link" href="#">
 							<img class="grid__img layer" src="img/canvas.png" alt="Canvas Dummy" />
 							<img class="grid__img layer" src="img/Dribbble1/3.png" alt="Wireframe Dummy" />
-							<img class="grid__img layer" src="img/Dribbble1/2.png" alt="04" />
+							<img class="grid__img layer" src="img/Dribbble1/4.png" alt="04" />
 							<span class="grid__title">More</span>
 						</a>
 					</li>
@@ -498,7 +511,7 @@
 						<a class="grid__link" href="#">
 							<img class="grid__img layer" src="img/canvas.png" alt="Canvas Dummy" />
 							<img class="grid__img layer" src="img/Dribbble1/3.png" alt="Wireframe Dummy" />
-							<img class="grid__img layer" src="img/Dribbble1/2.png" alt="012" />
+							<img class="grid__img layer" src="img/Dribbble1/4.png" alt="012" />
 							<span class="grid__title">More</span>
 						</a>
 					</li>
@@ -562,7 +575,7 @@
 						<a class="grid__link" href="#">
 							<img class="grid__img layer" src="img/canvas.png" alt="Canvas Dummy" />
 							<img class="grid__img layer" src="img/Dribbble1/3.png" alt="Wireframe Dummy" />
-							<img class="grid__img layer" src="img/Dribbble1/2.png" alt="031" />
+							<img class="grid__img layer" src="img/Dribbble1/4.png" alt="031" />
 							<span class="grid__title">More</span>
 						</a>
 					</li>
@@ -570,7 +583,7 @@
 						<a class="grid__link" href="#">
 							<img class="grid__img layer" src="img/canvas.png" alt="Canvas Dummy" />
 							<img class="grid__img layer" src="img/Dribbble1/3.png" alt="Wireframe Dummy" />
-							<img class="grid__img layer" src="img/Dribbble1/2.png" alt="04" />
+							<img class="grid__img layer" src="img/Dribbble1/4.png" alt="04" />
 							<span class="grid__title">More</span>
 						</a>
 					</li>
@@ -578,7 +591,7 @@
 						<a class="grid__link" href="#">
 							<img class="grid__img layer" src="img/canvas.png" alt="Canvas Dummy" />
 							<img class="grid__img layer" src="img/Dribbble1/3.png" alt="Wireframe Dummy" />
-							<img class="grid__img layer" src="img/Dribbble1/2.png" alt="012" />
+							<img class="grid__img layer" src="img/Dribbble1/4.png" alt="012" />
 							<span class="grid__title">More</span>
 						</a>
 					</li>
@@ -642,7 +655,7 @@
 						<a class="grid__link" href="#">
 							<img class="grid__img layer" src="img/canvas.png" alt="Canvas Dummy" />
 							<img class="grid__img layer" src="img/Dribbble1/3.png" alt="Wireframe Dummy" />
-							<img class="grid__img layer" src="img/Dribbble1/2.png" alt="031" />
+							<img class="grid__img layer" src="img/Dribbble1/4.png" alt="031" />
 							<span class="grid__title">More</span>
 						</a>
 					</li>
@@ -650,7 +663,7 @@
 						<a class="grid__link" href="#">
 							<img class="grid__img layer" src="img/canvas.png" alt="Canvas Dummy" />
 							<img class="grid__img layer" src="img/Dribbble1/3.png" alt="Wireframe Dummy" />
-							<img class="grid__img layer" src="img/Dribbble1/2.png" alt="04" />
+							<img class="grid__img layer" src="img/Dribbble1/4.png" alt="04" />
 							<span class="grid__title">More</span>
 						</a>
 					</li>
@@ -658,7 +671,7 @@
 						<a class="grid__link" href="#">
 							<img class="grid__img layer" src="img/canvas.png" alt="Canvas Dummy" />
 							<img class="grid__img layer" src="img/Dribbble1/3.png" alt="Wireframe Dummy" />
-							<img class="grid__img layer" src="img/Dribbble1/2.png" alt="012" />
+							<img class="grid__img layer" src="img/Dribbble1/4.png" alt="012" />
 							<span class="grid__title">More</span>
 						</a>
 					</li>
@@ -680,6 +693,7 @@
 		<script src="js/animOnScroll.js"></script>
 		<script src="js/main.js"></script>
 		<script>
+
 		(function() {
 			function getRandomInt(min, max) {
 				return Math.floor(Math.random() * (max - min + 1)) + min;
