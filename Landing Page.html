@@ -1,0 +1,1078 @@
+<!doctype html>
+<html><head><title>Landing Page</title><meta charset="UTF-8"><link href="http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,700,700italic|Roboto:400,700,700italic,400italic" rel="stylesheet" type="text/css"><style>/*
+ * Copyright 2014 Quip
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may
+ * not use this file except in compliance with the License. You may obtain
+ * a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations
+ * under the License.
+ */
+
+body {
+    font-size: 15px;
+    color: #333;
+    background: #fff;
+    padding: 60px 95px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "kern";
+    font-kerning: normal;
+    -moz-font-feature-settings: "kern";
+    -webkit-font-feature-settings: "kern";
+}
+
+/* Headings */
+h1, h2, h3, th {
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    margin: 0;
+    margin-top: 1.25em;
+    margin-bottom: 0.75em;
+}
+
+h1 {
+    font-size: 35px;
+    line-height: 42px;
+}
+
+h1:first-child {
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 18px;
+    line-height: 22px;
+}
+
+h3 {
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 16px;
+}
+
+/* Body text */
+body, p, ul, ol, td {
+    font-family: 'Crimson Text', serif;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+blockquote, q {
+    display: block;
+    margin: 1em 0;
+    font-style: italic;
+}
+
+blockquote a, q a {
+    text-decoration: underline;
+}
+
+blockquote {
+    padding-left: 10px;
+    border-left: 4px solid #a6a6a6;
+}
+
+q {
+    color: #a6a6a6;
+    line-height: 40px;
+    font-size: 24px;
+    text-align: center;
+    quotes: none;
+}
+
+q a {
+    color: #a6a6a6;
+}
+
+code, pre {
+    font-family: Consolas, "Liberation Mono", Menlo, "Courier Prime Web", Courier, monospace;
+    background: #f3f3f3;
+}
+
+code {
+    padding: 1px;
+    margin: 0 -1px;
+    border-radius: 3px;
+}
+
+pre {
+    display: block;
+    line-height: 20px;
+    text-shadow: 0 1px white;
+    padding: 5px 5px 5px 30px;
+    white-space: nowrap;
+    position: relative;
+    margin: 1em 0;
+}
+
+pre:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 15px;
+    border-left: solid 1px #dadada;
+}
+
+/* Lists */
+div[data-section-style="5"],
+div[data-section-style="6"],
+div[data-section-style="7"] {
+    margin: 12px 0;
+}
+
+ul {
+    padding: 0 0 0 40px;
+}
+
+ul li {
+    margin-bottom: 0.4em;
+}
+
+/* Bulleted list */
+div[data-section-style="5"] ul {
+    list-style-type: disc;
+}
+div[data-section-style="5"] ul ul {
+    list-style-type: circle;
+}
+div[data-section-style="5"] ul ul ul {
+    list-style-type: square;
+}
+div[data-section-style="5"] ul ul ul ul {
+    list-style-type: disc;
+}
+div[data-section-style="5"] ul ul ul ul ul {
+    list-style-type: circle;
+}
+div[data-section-style="5"] ul ul ul ul ul ul {
+    list-style-type: square;
+}
+
+/* Numbered list */
+div[data-section-style="6"] ul {
+    list-style-type: decimal;
+}
+div[data-section-style="6"] ul ul {
+    list-style-type: lower-alpha;
+}
+div[data-section-style="6"] ul ul ul {
+    list-style-type: lower-roman;
+}
+div[data-section-style="6"] ul ul ul ul {
+    list-style-type: decimal;
+}
+div[data-section-style="6"] ul ul ul ul ul {
+    list-style-type: lower-alpha;
+}
+div[data-section-style="6"] ul ul ul ul ul ul {
+    list-style-type: lower-roman;
+}
+
+/* Checklist */
+div[data-section-style="7"] ul {
+    list-style-type: none;
+}
+
+div[data-section-style="7"] ul li:before {
+    content: "\2610";
+    position: absolute;
+    display: inline;
+    margin-right: 1.2em;
+    margin-left: -1.2em;
+}
+
+div[data-section-style="7"] ul li.parent:before {
+    content: "";
+}
+
+div[data-section-style="7"] ul li.parent {
+    font-weight: bold;
+}
+
+div[data-section-style="7"] ul li.checked {
+    text-decoration: line-through;
+}
+
+div[data-section-style="7"] ul li.checked:before {
+    content: "\2611";
+    text-decoration: none;
+}
+
+/* Tables */
+div[data-section-style="8"] {
+    margin: 12px 0;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: separate;
+    border: solid 1px #7c7c7c;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .25);
+    table-layout: fixed;
+    position: relative;
+}
+
+table th, table td {
+    padding: 2px 2px 0;
+    min-width: 1.5em;
+    word-wrap: break-word;
+}
+
+table th {
+    border-bottom: 1px solid #ccc;
+    background: #f0f0f0;
+    font-weight: bold;
+    vertical-align: bottom;
+    color: #3a4449;
+    text-align: center;
+}
+
+table td {
+    padding-top: 0;
+    border-left: 1px solid #e1e1e1;
+    border-top: 1px solid #e1e1e1;
+    vertical-align: top;
+}
+
+table td.bold {
+    font-weight: bold;
+}
+
+table td.italic {
+    font-style: italic;
+}
+
+table td.underline {
+    text-decoration: underline;
+}
+
+table td.strikethrough {
+    text-decoration: line-through;
+}
+
+table td.underline.strikethrough {
+    text-decoration: underline line-through;
+}
+
+table td:first-child {
+    border-left: hidden;
+}
+
+table tr:first-child td {
+    border-top: hidden;
+}
+
+/* Images */
+div[data-section-style="11"] {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div[data-section-style="11"][data-section-float="0"] {
+    clear: both;
+    text-align: center;
+}
+
+div[data-section-style="11"][data-section-float="1"] {
+    float: left;
+    clear: left;
+    margin-right: 20px;
+}
+
+div[data-section-style="11"][data-section-float="2"] {
+    float: right;
+    clear: right;
+    margin-left: 20px;
+}
+
+div[data-section-style="11"] img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+hr {
+    width: 70px;
+    margin: 20px auto;
+}
+</style></head><body><h1 id='WYeACALiCoL'>Landing Page</h1>
+
+<a href="http://ccrb.technom.me/">http://ccrb.technom.me/</a><br/>
+
+<blockquote id='WYeACAp9cY7'>网站预览</blockquote>
+
+<br/>
+
+<blockquote id='WYeACAoPxTr'>Single page application – 最前面是电影，然后往下拉，看到产品线介绍，再之后是教育，再之后是应用（app store），最后是团队介绍。</blockquote>
+
+<br/>
+
+每个产品线有各自的独特主控，但配件是基本上都兼容。所以主控长得是不一样的。<br/>
+
+<br/>
+
+<blockquote id='WYeACAw8On7'>robot的主控就是AVR+ESP32</blockquote>
+
+<blockquote id='WYeACAY6P0K'>music的主控就是makey makey+bluetooth</blockquote>
+
+<blockquote id='WYeACAfrqjD'>light的主控就是AVR+esp+多个RGB灯</blockquote>
+
+<blockquote id='WYeACA0OhRK'>smart cicy的主控就是AVR+esp+LED显示屏</blockquote>
+
+<br/>
+
+围绕着这四大产品线的就是<br/>
+
+<br/>
+
+<blockquote id='WYeACAMFsih'>3D机械</blockquote>
+
+<blockquote id='WYeACAgIbpU'>各种硬件模块</blockquote>
+
+<blockquote id='WYeACAC6mZr'>开发平台</blockquote>
+
+<blockquote id='WYeACAgoNvR'>课程体系</blockquote>
+
+<blockquote id='WYeACADjoVx'>应用和游戏（主打AR）</blockquote>
+
+<hr/><h2 id='WYeACADUc1w'>Current</h2>
+
+<pre id='WYeACAzZEgt'><b>[I]       Website-related<br><b>[II]      Product-related<br></b></b><b>[III]     Outlook<br></b><b>[MTMT2P] </b> <b>May take more than 2 pages</b></pre>
+
+<h3 id='WYeACACA7IF'>MENUBAR</h3>
+
+What is Cocorobo → Products → Application → Education → Team → <del>Contact</del><br/>
+
+<h3 id='WYeACAEfrAc'>ONE PAGE Structure</h3>
+
+<div data-section-style='5'><ul id='WYeACAJotQO'><ul><li id='WYeACA212ag' class='' value='1'>1985：PC
+
+<br/></li><li id='WYeACAEjHIC' class=''>1995：Internet
+
+<br/></li><li id='WYeACAZJELd' class=''>2005：Desktop 3d printing: RepRap
+
+<br/></li><li id='WYeACAoK48R' class=''>2015:    AR：Hololens
+
+<br/></li></ul><li id='WYeACAySjKA' class='parent'><b>[1]  [<u>I</u>]   </b>Headers w/ hero images
+
+<br/></li><ul><li id='WYeACAgzAnX' class='parent'>Slogans w/ kids making stuff as bg 
+
+<br/></li><ul><li id='WYeACA0DxXv' class=''>Make for fun（为乐趣而创造）
+
+<br/></li></ul></ul><li id='WYeACAMLoY5' class='parent'><b><b>[2]  </b>[<u>I</u>]<b>   </b></b>What is Cocorobo
+
+<br/></li><ul><li id='WYeACAWwjJP' class='parent'>简介 (less than 2 paragraphs)
+
+<br/></li><ul><li id='WYeACAEnPZs' class=''>CocoRobo是一家专注于STEAM（科学，技术，工程，艺术，数学）教育的科技公司（edutech）。
+
+<br/></li></ul><li id='WYeACAB9sSF' class='parent'>使命 (<i>*why we're doing this )</i>
+
+<br/></li><ul><li id='WYeACA2Aw4m' class='parent'>&lt;背景&gt;
+
+<br/></li><ul><li id='WYeACAiDP5K' class='parent'>大约每隔十五年左右，就会迎来一次技术与社会的碰撞。
+
+<br/></li><ul><li id='WYeACAtG1Po' class=''>1985：个人电脑的诞生，使它成为普通人能用的产品
+
+<br/></li><li id='WYeACAxNxnh' class=''>1995：互联网的出现，让人们与世界连结起来
+
+<br/></li><li id='WYeACA8QfnM' class=''>2005：第一款开源桌面3D打印机: RepRap
+
+<br/></li><li id='WYeACAGHPsr' class=''>2015：微软公司推出了跨时代的增强现实产品: Hololens
+
+<br/></li></ul><li id='WYeACA5n3MU' class=''>随着人工智能、机器人、增强现实、3D打印等新技术的发展，新的技术和设备正在代替人类解决越来越多难题，完成更多专业性的精细工作，改变了我们与世界的交互方式。生产环节中按部就班和机械模仿将逐渐被智能机器所取代，而无法被取代的将是人区别于机器独有的创造力和对新知的探求利用。
+
+<br/></li></ul><li id='WYeACAVbras' class='parent'>&lt;理念&gt;
+
+<br/></li><ul><li id='WYeACA2IHu6' class=''>当我们的孩子踏入社会时，70%的工作现在还未被创造出来，那么如何应对这么一个快速变化的时代？
+
+<br/></li><li id='WYeACAxA6fp' class='parent'>我们是一家不断探索最前沿技术，并在第一时间转化为STEAM教育产品的科技公司。
+
+<br/></li><ul><li id='WYeACAslkbS' class=''>我们的使命就是把最新的理念和技术带到STEAM的教育中去，把最好的设计，体验带到产品中来。
+
+<br/></li><li id='WYeACAQrCTG' class=''>与全球前沿科技一起，将技术、思考、设计、游戏融入独一无二的创造中，迎接个人制造时代。
+
+<br/></li></ul></ul></ul><li id='WYeACAFjM1x' class='parent'>我们怎么做？
+
+<br/></li><ul><li id='WYeACAD8bcA' class=''>我们通过融合3D打印技术，模块化的硬件/软件设计，增强现实技术，来打造一系列多元化，创新型，寓教于乐的套件产品。
+
+<br/></li></ul></ul><li id='WYeACAqOxVt' class='parent'><b><b><b>[3]  </b></b>[<u>II</u>]<b>   </b></b>Products (Work-In-Progress）
+
+<br/></li><ul><li id='WYeACA3JFVf' class=''>Overview
+
+<br/></li><li id='WYeACAVRF2e' class='parent'>模块（Coco Mod）
+
+<br/></li><ul><li id='WYeACAxRfnU' class='parent'>简介
+
+<br/></li><ul><li id='WYeACAgAkju' class=''>我们现在推出了一系列的硬件模块（Coco Mod），从负责核心的主控模块，到各种各样的传感器模块，输入输出模块等等。用户利用这些模块，通过不同的组合，可以实现各种功能的产品，从机器人到智能家庭硬件。
+
+<br/></li><li id='WYeACAoKwic' class=''>在模块设计上，我们采用对用户友好的积木式设计，并利用标准化接口来让各个模块之间进行通信。
+
+<br/></li></ul><li id='WYeACAULt0G' class='parent'>模块总结 <control data-remapped="true" id="WYeACANQu8v"><a href="https://quip.com/BgvUA9jGfsqE">【模块】总结</a></control> 
+
+<br/></li><ul><li id='WYeACAryXXw' class='parent'>主控模块
+
+<br/></li><ul><li id='WYeACApYmDV' class='parent'>特色
+
+<br/></li><ul><li id='WYeACAMNhLt' class=''>WiFi / BT ready
+
+<br/></li><li id='WYeACA04z0S' class=''>GPIO /ADC / PWM ..
+
+<br/></li><li id='WYeACA46t4I' class=''>SPI/I2C/UART
+
+<br/></li></ul></ul><li id='WYeACAWgvu5' class='parent'>功能模块 
+
+<br/></li><ul><li id='WYeACAxNudL' class='parent'>输入类
+
+<br/></li><ul><li id='WYeACA7KAPn' class=''>button
+
+<br/></li><li id='WYeACAvpR9D' class=''>knob
+
+<br/></li><li id='WYeACAAzXrW' class=''>temp/moisture (environmental)
+
+<br/></li><li id='WYeACAPoitN' class=''>touchpad
+
+<br/></li><li id='WYeACAvyz5C' class=''>joystick
+
+<br/></li><li id='WYeACAeCEVk' class=''>gyroscope
+
+<br/></li><li id='WYeACAhQ42v' class=''>keypad
+
+<br/></li><li id='WYeACA5Iqsg' class=''>audio analyzer
+
+<br/></li><li id='WYeACA7EnJJ' class=''>wifi camera
+
+<br/></li><li id='WYeACAZh62h' class=''>GSM
+
+<br/></li><li id='WYeACADRqhn' class=''>mp3 controller
+
+<br/></li><li id='WYeACA1lAyQ' class=''>makey makey
+
+<br/></li></ul><li id='WYeACAN72AC' class='parent'>输出类
+
+<br/></li><ul><li id='WYeACAYBwVZ' class='parent'>Display
+
+<br/></li><ul><li id='WYeACAp1mWT' class=''>8*8
+
+<br/></li><li id='WYeACABGk0q' class=''>1.44
+
+<br/></li></ul><li id='WYeACAyOM5m' class=''>Battery management
+
+<br/></li><li id='WYeACAOtkBZ' class=''>mp3 player
+
+<br/></li><li id='WYeACAIesNP' class=''>motor controller
+
+<br/></li><li id='WYeACAIcnQP' class=''>servo controller
+
+<br/></li></ul></ul></ul><li id='WYeACASHAwZ' class='parent'>“组合”大不同(showcase)
+
+<br/></li><ul><li id='WYeACAKehM6' class=''>我自这里说一下板子的连线方式：一个典型的舵机应用是，最上面是舵机板，中间是主控板，下面是电池板。主控板的排针主要在上方，只保留电池的排针在下面。板子与板子之间的插针采用复用的方式（其实这跟microduino是一样了，但只能主要）。（下面这个图是为了让你参考的<control data-remapped="true" id="WYeACAhGxuj">Tommy</control> ，一个虚线的狗，或者怎么好看怎么来吧。身上拖着这三块，需要小字注明的是，舵机和舵机驱动板之间的连线在示意图中省去了。如果想用小车的话，就把舵机驱动版换成电机驱动板就可以了）
+
+<br/></li><li id='WYeACAKTL5r' class=''>（这里还需要再讨论下，就像在总结帖里说的那样，主机模块即控制器模块是左右叠加的，从机模块即机器人模块是上下叠加的）
+
+<br/></li></ul></ul></ul></ul></div><div data-section-style='11' style='max-width:47%'><img src='https://quip.com/blob/WYeAAA1nhIR/Rs8aIlz1XNpSgnoO1CM9XA?a=6IuExidsaL63m8appR2rRmorqsTlPNCPdCpCynq9ouQa' id='WYeACAzMpje' alt='' width='376' height='211'></img></div><div data-section-style='5'><ul id='WYeACAq1zLL'><ul><li id='WYeACAp6B1x' class='parent' value='1'>丰富的3D模型库 (w/ modules attached)
+
+<br/></li><ul><li id='WYeACACHWNH' class='parent'>“打印一切!”
+
+<br/></li><ul><li id='WYeACArs34n' class=''>3D打印技术经过过去二十多年的发展，已经接近走到成熟期。我们认为，3D打印技术在教育领域已经足够可用。如火如荼般发展的创客运动和创客空间，让3D打印不再是遥不可及。并且我们有理由相信，随着技术的发展，3D打印质量会越来越好，成本越来越低。
+
+<br/></li><li id='WYeACAMAuAs' class=''>在我们的社区里，提供所有的免费的3D零件，供用户自行打印，组装。
+
+<br/></li><li id='WYeACA85SMc' class=''>用户也可以使用我们的3D打印服务，来打印所有零件。
+
+<br/></li></ul><li id='WYeACA0DRgn' class=''><span data-section-style='11' style='max-width:61%'><img src='https://quip.com/blob/WYeAAA1nhIR/caxK4K2XgEd-bGci3HI9zQ?a=r6rQGnaInoraBS7TF2953PGarbpOaSlHO4EIiKlecxUa' id='WYeACA0DRgn' alt='' width='495' height='330'></img></span></li><li id='WYeACAKJvfW' class='parent'>3D模型社区：“explode model”  （到底是放这里还是放下面robot呢）
+
+<br/></li><ul><li id='WYeACAkn9to' class=''>Drone <a href="http://a360.co/29ZNorg">http://a360.co/29ZNorg</a>
+
+<br/></li><li id='WYeACAfdRaB' class=''>Doggy <a href="http://a360.co/29ZNWh7">http://a360.co/29ZNWh7</a>
+
+<br/></li><li id='WYeACArrWoj' class=''>Car <a href="http://a360.co/29ZNShb">http://a360.co/29ZNShb</a>
+
+<br/></li><li id='WYeACAuigRz' class=''>Arm <a href="http://a360.co/29YMRDm">http://a360.co/29YMRDm</a>
+
+<br/></li><li id='WYeACAJ5Dpn' class=''>Android 1/2 <a href="http://a360.co/29XF7Tk">http://a360.co/29XF7Tk</a>
+
+<br/></li><li id='WYeACAzUpo4' class=''>Android 2/2 <a href="http://a360.co/29ZPKGU">http://a360.co/29ZPKGU</a>
+
+<br/></li></ul></ul><li id='WYeACA4hqJR' class='parent'>套件 
+
+<br/></li><ul><li id='WYeACAlNTEJ' class='parent'>概述
+
+<br/></li><ul><li id='WYeACAmgega' class=''>精致，轻量级，模块化的STEAM电子套件。我们希望科学的设计与搭配，激发用户无限的创造潜能。启发任何对机器人感兴趣的知识青年一起创造科学教育的未来。
+
+<br/></li></ul><li id='WYeACAotWJb' class='parent'>机器人套件 (pack) （先讲robot）
+
+<br/></li><ul><li id='WYeACAqMyYq' class=''>图片：6款机器人组成的机器人兵团3D图，就像是钢铁侠仓库里的那个战袍仓库，一个个陈列着，每个机器人分别展示（用那种线条图）
+
+<br/></li><li id='WYeACAnXXz9' class=''>意义：（想不出来了）
+
+<br/></li><li id='WYeACAfhdvG' class=''><del>机器人教育融合了编程、逻辑思维、情境设计、跨学科知识，来全方位的锻炼学生的动手和认知能力，在有趣的制作和比赛中习得团队协作精神</del>。
+
+<br/></li><li id='WYeACA0cGYw' class=''>文字：套件包括主控模块，舵机驱动模块，电机驱动模块，运动传感模块，电机，舵机
+
+<br/></li></ul><li id='WYeACASrIpa' class='parent'>灯光套件 (pack)
+
+<br/></li><ul><li id='WYeACAiAF0A' class=''>图片：（一个典型的照片就是那个富士山无人机 ） （也可以是3D something +小盒子）
+
+<br/></li><li id='WYeACAk0952' class=''>意义：探索光与影的美妙，人人都是灯光大师。
+
+<br/></li><li id='WYeACAZxh6d' class=''>文字：套件包括主控模块，4*4，8*8叠加的点阵屏模块（标配），灯柱，灯带（选配） 参考这里：<a href="http://shop.blinkinlabs.com/collections/all">http://shop.blinkinlabs.com/collections/all</a>
+
+<br/></li><li id='WYeACAv5E0b' class=''><span data-section-style='11' style='max-width:100%'><img src='https://quip.com/blob/WYeAAA1nhIR/7HO4nU6dWNE8C76lqVcw2w?a=yabYSzWyxLoafPPF4HRsn8ZeKU4KXjbu1kCt2vIXIWka' id='WYeACAv5E0b' alt='' width='800' height='484'></img></span></li></ul><li id='WYeACAzewyE' class='parent'>音乐套件(synthetic instruments) (pack)
+
+<br/></li><ul><li id='WYeACAEesoU' class=''>图片： 厨房乐队（在CIDE拍）/ 也可以是3D钢琴渲染图 + 小盒子 （再议）
+
+<br/></li><li id='WYeACAw9QAY' class=''>意义：玩音乐不需要乐器，自家厨房就是你的车库乐队，动手来造吧。
+
+<br/></li><li id='WYeACAMumQf' class=''>文字：套件包括主控模块，Touch key USB Shield（就是电阻完成makey的事情），压力传感模块，触摸传感模块（标配），鳄鱼夹
+
+<br/></li></ul><li id='WYeACAvV9Hr' class='parent'>智能家居套件 (pack)
+
+<br/></li><ul><li id='WYeACAqhR4V' class=''>图片：钢铁侠的家
+
+<br/></li><li id='WYeACA6lf8Z' class=''>意义：快来改造家里的物品吧，赋予它们神奇的能力
+
+<br/></li><li id='WYeACA1NTcG' class=''>文字：套件包括主控模块，各种传感器，显示器
+
+<br/></li></ul><li id='WYeACAZdjoc' class='parent'>3D 打印套件(pack)（家用级热熔型3D打印机）：
+
+<br/></li><ul><li id='WYeACAFGFqR' class=''>图片：3D打印机的3D图 
+
+<br/></li><li id='WYeACACJosH' class=''>意义：想体验一下造物者的感觉吗？你值得拥有。
+
+<br/></li><li id='WYeACAftjka' class=''>文字：套件包括主控模块，电机驱动模块，电机，五金零配件
+
+<br/></li></ul></ul><li id='WYeACASCWh0' class='parent'>产品feature总结：
+
+<br/></li><ul><li id='WYeACAjPwq6' class=''>即插即用，plug and play
+
+<br/></li></ul></ul></ul></div><div data-section-style='11' style='max-width:100%'><img src='https://quip.com/blob/WYeAAA1nhIR/-ILyG62zjUvwquGf9g-Lqw?a=WVbW694czLIQRAbaKXq753ERXgJjHgSn2HhQMSdALysa' id='WYeACA1Z4Tp' alt='' width='800' height='600'></img></div><div data-section-style='5'><ul id='WYeACAoSNQ9'><ul><ul><li id='WYeACAxl6Is' class='parent' value='1'>不同的组合，得到万物
+
+<br/></li><ul><li id='WYeACApH4iQ' class=''>这照片可以是一个gif。即核心是几个模块叠加，外面是3D模型，五六款，来回变化。动画，你们脑补一下。
+
+<br/></li></ul><li id='WYeACAe3BJJ' class='parent'>DIY风格
+
+<br/></li><ul><li id='WYeACAGK7VW' class=''>喷漆，装饰等
+
+<br/></li></ul><li id='WYeACAO2hOZ' class='parent'>云端智能
+
+<br/></li><ul><li id='WYeACAMUHDq' class=''>小车子，然后旁边是一个巨大的机房。那种画面。
+
+<br/></li></ul><li id='WYeACALYo2y' class='parent'>丰富多样的人机交互
+
+<br/></li><ul><li id='WYeACARpzhQ' class=''>来个照片，我们的AR demo演示
+
+<br/></li></ul></ul></ul><li id='WYeACAMCnL0' class='parent'><b><b><b>[4]  </b></b>[<u>II</u>]<b>   </b></b>应用
+
+<br/></li><ul><li id='WYeACAVigiL' class='parent'>概述 (wide variety of things people can make)
+
+<br/></li><ul><li id='WYeACADrvp7' class=''>How kids/people can learn from all this kind of projects
+
+<br/></li><li id='WYeACAhkQwh' class=''>结合我们的套件产品，我们开发了一系列有趣的应用。我们希望，可以通过这些应用不断地激发孩子们对技术的兴趣和热情，早早埋下创新的种子。
+
+<br/></li></ul><li id='WYeACANZzie' class='parent'>桌面级APP
+
+<br/></li><ul><li id='WYeACABrIyN' class='parent'>Cocoduino：
+
+<br/></li><ul><li id='WYeACA8uXwC' class=''>这是一款桌面版的APP，兼容当今世界最流行的Arduino开发环境，丰富的资源和技术支持，适合14岁以上儿童。
+
+<br/></li></ul><li id='WYeACAihj7D' class='parent'>Coco Scratch
+
+<br/></li><ul><li id='WYeACANRtUF' class=''>一款图形化编程平台，敲击一下鼠标便能完成一个简单的项目，适合8-16岁儿童。
+
+<br/></li></ul><li id='WYeACAZ3s2h' class='parent'>Coco Leap Motion
+
+<br/></li><ul><li id='WYeACAkfqYy' class=''>这是一款桌面版的APP，通过它来实现Leap motion对机器人的控制，完成更多有趣好玩的操作。
+
+<br/></li></ul></ul><li id='WYeACAaNiJN' class='parent'>手机版APP
+
+<br/></li><ul><li id='WYeACAfmkV6' class='parent'>Coco Playground
+
+<br/></li><ul><li id='WYeACAsRwND' class=''>这是一款结合AR技术的趣味性编程手机APP，借助实体的积木以及屏幕上的动画，引导小朋友去学习和理解编程，适合6-10岁儿童。
+
+<br/></li></ul><li id='WYeACAeYvmm' class='parent'>Coco Go
+
+<br/></li><ul><li id='WYeACAYpm7f' class=''>这是一款用于控制机器人运动的手机APP，支持多达4路电机和12路舵机的控制，同时可以通过预编程的方式为每款机器人设定各自的运动学算法。
+
+<br/></li></ul><li id='WYeACA3kB9w' class='parent'>Coco Battle
+
+<br/></li><ul><li id='WYeACAqys4E' class=''>这是一款结合AR技术的趣味性游戏APP，支持多达3位用户，6台机器人的对战平台，让小朋友可以玩中学。
+
+<br/></li></ul><li id='WYeACAtlQ6E' class='parent'>Coco Music
+
+<br/></li><ul><li id='WYeACAbS3aa' class=''>这是一款跟音乐套件配合使用的手机APP，内置多款电子乐器，如钢琴，吉他，架子鼓等。
+
+<br/></li></ul><li id='WYeACAO2uVQ' class='parent'>Coco Blink
+
+<br/></li><ul><li id='WYeACAwXEuE' class=''>这是一款跟灯光套件配合使用的手机APP，可以用它来控制LED点阵屏的亮度，颜色，图案，以及进行趣味性互动。
+
+<br/></li></ul><li id='WYeACAM5jKR' class='parent'>Coco Hub
+
+<br/></li><ul><li id='WYeACAu2mmJ' class=''>这是一款跟物联网套件配合使用的手机APP，用它可以实时汇总和监测传感器上的信息，并且可以用过编程的方式实现多个传感器节点之前的互动。
+
+<br/></li></ul></ul><li id='WYeACA02fNG' class='parent'>演示 （演示这个词不太好。此处放电影）
+
+<br/></li><ul><li id='WYeACA3SLO1' class=''>机器狗从3D打印机里钻出来.
+
+<br/></li><li id='WYeACAwUGEa' class=''>机器狗驼着东西走到机械臂面前； （机器狗）
+
+<br/></li><li id='WYeACAiTblg' class=''>我们用leap motion操作，从狗上面取出东西，送给无人机；（leapmotion + 机械臂）
+
+<br/></li><li id='WYeACAQjZmV' class=''>我们操控无人机，它带着东西，飞到另一层楼；（无人机）
+
+<br/></li><li id='WYeACA5HZgD' class=''>把东西交给小车，小车运着东西往前走，碰到一个敌人小车，于是它发炮弹消灭对手。（小车 + robot battle）
+
+<br/></li><li id='WYeACAxGc6x' class=''>赢了的小车再运着东西到达我们的lab，Lab没有开灯，只有一个LED点阵，我们用机械臂打开包裹，里面是一个手机，我们拿着手机，利用空中写字的功能，在点阵屏上输入密码！然后输入成功之后，lab的灯点亮！（点阵屏 + ar paintin）
+
+<br/></li><li id='WYeACAYSxQu' class=''>然后镜头切到水果键盘，然后点几下，清脆的音乐；（音乐套件）
+
+<br/></li><li id='WYeACA4XEr7' class=''>LED上出现滚动字：party 开始！
+
+<br/></li><li id='WYeACAniwGQ' class=''>然后，开始劲爆音乐，继续dj打碟，双足机器人舞动起来。（双足机器人）
+
+<br/></li><li id='WYeACAXscwd' class=''>最后滚动显示几个大字：Make for fun
+
+<br/></li></ul></ul><li id='WYeACAClnLm' class='parent'><b><b><b>[5]  </b></b>[<u>II</u>]<b>   </b></b>教育
+
+<br/></li><ul><li id='WYeACAjcCrF' class=''>我们提供一站式的STEAM教育解决方案，包括课程开发、课程传授、实验室设计、套件提供、知识内容提供等。
+
+<br/></li><li id='WYeACAeYNwo' class='parent'>我们坚信，科学教育在教会学生科学知识的同时，能够最好地鼓励学生的好奇心，激发探索欲望，培养良好的学习习惯。
+
+<br/></li><ul><li id='WYeACAfp4yj' class='parent'>组装，学习，玩乐（就模仿那个图片，上面有机器人，scratch的编程截图，有AR游戏的截图）
+
+<br/></li><ul><li id='WYeACAJbF47' class=''>标准化的模块接口，丰富的产品形态，完整的组装教程。
+
+<br/></li><li id='WYeACAHOjjV' class=''>从0到1的进阶学习教程，上百个趣味编程项目，一步步成长为技术达人。
+
+<br/></li><li id='WYeACAinJCe' class=''>我们推出了诸如机器人大作战的趣味游戏，结合机器人和增强现实，实现寓教于乐
+
+<br/></li></ul><li id='WYeACAWvIHk' class='parent'>丰富的课程设计（来一个系列书本的图片）
+
+<br/></li><ul><li id='WYeACAoRNfN' class=''>我们提供了”机器人课程”，”灯光课程”，”音乐课程”，”智能家居课程”四大课程系列。
+
+<br/></li><li id='WYeACAILU3F' class=''>适用各种层次的教学大纲，超过100个课时的课程，覆盖从基础到进阶的技术指导，以及内容详实的教师手册和学生教材。
+
+<br/></li><li id='WYeACAKWFKn' class=''>提供科学化的考核体系，便于教师掌握学习质量。
+
+<br/></li><li id='WYeACACyY2V' class=''>游戏化融入课堂教学，引入奖励机制，激发学生兴趣。
+
+<br/></li></ul><li id='WYeACADnutP' class='parent'>帮助建立STEAM实验室（来一个实验室的图片）
+
+<br/></li><ul><li id='WYeACAlULeL' class=''>完整的创客空间建设方案
+
+<br/></li><li id='WYeACA5Myjb' class=''>培训及技术支持
+
+<br/></li><li id='WYeACAflD2e' class=''>辅助个性化课程的研发
+
+<br/></li><li id='WYeACAMeGiZ' class=''>全球性的社区环境
+
+<br/></li></ul><li id='WYeACAVdNUt' class='parent'><del>针对学校</del>
+
+<br/></li><ul><li id='WYeACArV1Ie' class=''><del>课程开发和传授</del>
+
+<br/></li><li id='WYeACAuGq8Q' class=''><del>培训和技术支持</del>
+
+<br/></li><li id='WYeACAna6N3' class=''><del>创建STEAM实验室</del>
+
+<br/></li><li id='WYeACAZM1Mx' class=''><del>社区</del>
+
+<br/></li></ul><li id='WYeACA8teQC' class='parent'><del>针对个人</del>
+
+<br/></li><ul><li id='WYeACAraqg6' class=''><del>社区支持</del>
+
+<br/></li><li id='WYeACA22Lxt' class=''><del>完备的课程</del>
+
+<br/></li></ul></ul><li id='WYeACAmoU4c' class='parent'>Manifesto (&amp; quotes from famous innovators) （STEAM）
+
+<br/></li><ul><li id='WYeACALrQmZ' class=''>Mens et Manus (高校)
+
+<br/></li><li id='WYeACATm9yU' class=''>Steve Jobs, Steve Woz, Jonathan Ive （电子产品，工业设计）
+
+<br/></li><li id='WYeACADyHku' class=''>Seymour Papert &amp;  Mitchel Resnick （计算机科学家，儿童编程推动者）
+
+<br/></li><li id='WYeACAM8npR' class=''>王澍 &amp; 徐冰 （建筑师，艺术家）
+
+<br/></li><li id='WYeACAjeCK7' class=''>Elon Musk, JB Straubel,Tom Mueller （企业家，电动车专家，火箭专家）
+
+<br/></li></ul></ul><li id='WYeACAcpnZL' class='parent'><b><b><b>[6]  </b></b>[<u>III</u>]<b>   </b></b>展望
+
+<br/></li><ul><li id='WYeACAOCuE1' class=''>&lt;火星，宇宙，火箭，小孩&gt;
+
+<br/></li><li id='WYeACAFTm2n' class=''>&lt;made for dreamers &amp; innovators&gt;
+
+<br/></li></ul><li id='WYeACA9H1hc' class='parent'> <b><b>[7]  </b></b><b>[</b><u>II</u><b>]  </b>团队
+
+<br/></li><ul><li id='WYeACAbrcL7' class=''>Overview
+
+<br/></li></ul><li id='WYeACACEubS' class='parent'><b><b><b>[8]  </b></b>[<u>III</u>]<b>   </b></b>Footer
+
+<br/></li><ul><li id='WYeACAJ9uLs' class=''>Social profile
+
+<br/></li><li id='WYeACANGx7j' class=''>PR inquiry or related stuff
+
+<br/></li></ul></ul></div><blockquote id='WYeACARDdRB'>Contact, Blog, Shop, FAQ</blockquote>
+
+<hr/><h2 id='WYeACAyquAe'>Content</h2>
+
+↓↓↓<br/>
+
+<br/>
+
+大纲框架：<br/>
+
+<br/>
+
+<b>1 产品</b><br/>
+
+<div data-section-style='5'><ul id='WYeACAwSPgG'><li id='WYeACAT1Xs1' class='' value='1'>1.0 产品理念
+
+<br/></li><li id='WYeACA2JgB4' class=''>1.1 机器人套件
+
+<br/></li><li id='WYeACA6iMCq' class=''>1.2 灯光套件
+
+<br/></li><li id='WYeACAhdmkj' class=''>1.3 音乐套件
+
+<br/></li><li id='WYeACA0Pec3' class=''>1.4 智慧城市套件
+
+<br/></li><li id='WYeACAszPwU' class=''>1.5 3D打印机套件
+
+<br/></li></ul></div><b>2 教育</b><br/>
+
+<div data-section-style='5'><ul id='WYeACAZvFly'><li id='WYeACAcKQFN' class='' value='1'>2.1 创客
+
+<br/></li><li id='WYeACA1ccRE' class=''>2.2 学校
+
+<br/></li></ul></div><b>3  增强现实乐园</b><br/>
+
+<div data-section-style='5'><ul id='WYeACAkFVbq'><li id='WYeACACvFef' class='' value='1'>3.1 增强现实什么？
+
+<br/></li><li id='WYeACACxldF' class=''>3.2 增强现实+开发
+
+<br/></li><li id='WYeACAv4Gbi' class=''>3.3 增强现实+应用
+
+<br/></li></ul></div><b>4  关于</b><br/>
+
+<div data-section-style='5'><ul id='WYeACA7xHr0'><li id='WYeACAEPxXQ' class='' value='1'><b> </b>4.1 关于我们
+
+<br/></li><li id='WYeACAHVyWm' class=''>4.2 口号
+
+<br/></li><li id='WYeACAmI9rH' class=''>4.3 团队
+
+<br/></li></ul></div><b>5 联络</b><br/>
+
+<br/>
+
+<del>6 商城</del><br/>
+
+<div data-section-style='11' style='max-width:100%'><img src='https://quip.com/blob/WYeAAA1nhIR/odTuHw_o5aJSWo_Z465F8A?a=cldNTqJCCoLbkVPspmqik8oyebqpbHn2vQ4YOc3NOeUa' id='WYeACAG8Ope' alt='' width='800' height='54'></img></div><hr/><h2 id='WYeACAM1bw6'>1 产品</h2>
+
+<h3 id='WYeACAKyUJT'>1.0 产品理念</h3>
+
+<div data-section-style='5'><ul id='WYeACAKi1wF'><li id='WYeACA3mBcq' class='' value='1'>紧密围绕着”思考与动手（mind and hand）”的原则，打造一家针对STEAM（科学，技术，工程，艺术，数学）教育理念的电子套件公司。
+
+<br/></li><li id='WYeACAPayLo' class=''>我们通过融合3D打印技术，模块化的硬件/软件设计，增强现实技术，来打造一系列多元化，创新型，寓教于乐的套件产品。
+
+<br/></li><li id='WYeACAWs4Nk' class=''>我们的主要产品是面向用户的主题式学习及开发套件，其中包括免费的3D机械文件，种类丰富、友好易用的硬件模块，适合各种年龄阶层的开发环境。
+
+<br/></li></ul></div><h3 id='WYeACAdEbRf'>1.1 机器人套件（机器达人）</h3>
+
+<div data-section-style='5'><ul id='WYeACA5zxjh'><li id='WYeACAezK4c' class='' value='1'>机器人——未来世界的APP，我们将从探索机器人开始，打开未来连接人机智能的大门。
+
+<br/></li><li id='WYeACAQBMaG' class=''>机器人教育融合了编程、逻辑思维、情境设计、跨学科知识，来全方位的锻炼学生的动手、动脑能力，以及团队协作精神。
+
+<br/></li><li id='WYeACAx60nc' class=''>套件主题包括：四足/双足/无人机/机械臂/小轮车。
+
+<br/></li><li id='WYeACAoMxVq' class=''>套件包括：主控，电机驱动器，舵机驱动器，舵机，电机，3D机械文件
+
+<br/></li></ul></div><h3 id='WYeACAbjk8d'>1.2 灯光套件（星星点灯）</h3>
+
+<div data-section-style='5'><ul id='WYeACA2vC7X'><li id='WYeACACCs0J' class='' value='1'>想复刻钢铁侠身上蓝光闪闪的弧形反应堆（Arc reactor）吗？造两把星球大战里的光剑武器出来，与小伙伴们来一番PK吧。是不是厌倦了一成不变的白炽灯，给自己的卧室做个氛围灯如何？
+
+<br/></li><li id='WYeACAWrsVs' class=''>我们这套灯光套件就是为你准备的，通过XXX
+
+<br/></li><li id='WYeACAblLO1' class=''>套件包括：主控，灯带，灯柱，灯环，灯点阵屏
+
+<br/></li></ul></div><h3 id='WYeACAzcgA9'>1.3 音乐套件（小小音乐家）</h3>
+
+<div data-section-style='5'><ul id='WYeACA15fGg'><li id='WYeACApAvBR' class='' value='1'>你要做一台美味又动听的水果电子琴吗？你想用锅碗瓢盆打造一个厨房乐队吗？你想导演一台妙趣横生的音乐剧吗？
+
+<br/></li><li id='WYeACAb1Nbp' class=''>这是一个与音乐有关的套件，通过巧妙的设计，把所有的导电物体（水果，导电金属，人体等）变成触发源，用户通过与之接触，来触发自定义的声音。除此以外，我们还提供一些列传感器附件，来响应更多种有趣的触发事件：触碰，按压，摇动，甚至包括用户自己定义的方式。
+
+<br/></li><li id='WYeACAV5CO9' class=''>套件包括：主控，按钮，压力传感器，触摸传感器，三轴加速器等
+
+<br/></li></ul></div><h3 id='WYeACA35QRY'>1.4 物联网套件</h3>
+
+<div data-section-style='5'><ul id='WYeACAWcIIj'><li id='WYeACAM5aSc' class='' value='1'>是不是担心忘了给家里的花盆按时浇水？是不是想过出门在外如何给宠物喂食？会不会担心房间里的灯没关？给爷爷奶奶做一个爱心按钮是不是很酷？
+
+<br/></li><li id='WYeACAu6e5L' class=''>通过物联网套件改造身边的物品，赋予它们神奇的能力
+
+<br/></li><li id='WYeACAfdlsC' class=''>套件包括：温度，光照强度，音量，湿度传感器，空气质量传感器，显示屏
+
+<br/></li></ul></div><h3 id='WYeACA8b94w'>1.5 3D打印机套件</h3>
+
+<div data-section-style='5'><ul id='WYeACAPhaC7'><li id='WYeACAAHAEZ' class='' value='1'>你将通过3D打印技术，告别千篇一律的机器人。
+
+<br/></li><li id='WYeACAbzDnR' class=''>
+
+<br/></li></ul></div><br/>
+
+<h2 id='WYeACADCTKi'>2 教育</h2>
+
+<h3 id='WYeACA8HEQ9'>2.1 创客</h3>
+
+<br/>
+
+<h3 id='WYeACAquTCR'>2.2 学校</h3>
+
+我们为学校与机构提供创客教育解决方案，从初创构思到最终完成杰作，发现有价值的问题并寻找解决的途径，养成创造性思维的习惯，为此，我们提供<br/>
+
+<div data-section-style='5'><ul id='WYeACANBvJg'><li id='WYeACABJb1U' class='' value='1'>完备的课程体系：小学，初中，高中和大学
+
+<br/></li><li id='WYeACANVyuk' class=''>STEAM实验室：通过一站式的产品，吸纳MIT最前沿教学理念与技术，持续的技术支持以及社区服务，帮助学校更好的提供STEAM教育课程，完成从素质教育到STEAM教育升级。
+
+<br/></li><li id='WYeACA7gIY4' class=''>教师培训
+
+<br/></li><li id='WYeACA53xTg' class=''>联系我们
+
+<br/></li></ul></div><h2 id='WYeACAlpt25'>3 增强现实乐园</h2>
+
+这是我们区别于大部分的教育类机器人公司的不同之处。未来世界是一个混合现实（mixed-reality）的世界。<br/>
+
+<h3 id='WYeACAPXOJz'>3.1 增强现实什么？</h3>
+
+开眼里有几个不错的视频，可以找几个视频，胜于文字<br/>
+
+<h3 id='WYeACAGBB5J'>3.2 增强现实+开发</h3>
+
+我们提供XXX<br/>
+
+<br/>
+
+<br/>
+
+<h3 id='WYeACAH7NY0'>3.3 增强现实+应用</h3>
+
+我们提供XXX<br/>
+
+<br/>
+
+<br/>
+
+<h2 id='WYeACA3NoyA'>4 关于</h2>
+
+<h3 id='WYeACAqk51h'>4.1 关于我们</h3>
+
+我们是一家专注于STEAM（科学，技术，工程，艺术，数学）教育的科技公司。<br/>
+
+<br/>
+
+大约每隔十五年左右，就会迎来一次技术与社会的碰撞。1980年左右推出的个人电脑，使它成为普通人能用的产品。1995年左右诞生的互联网，让人们与世界连结起来。继互联网之后，越来越多的技术快速爆发。随着人工智能、机器人、增强现实、3D打印等新技术的发展，新的技术和设备正在代替人类解决越来越多难题，完成更多专业性的精细工作，改变了我们与世界的交互方式。当我们的孩子踏入社会时，70%的工作现在还未被创造出来。生产环节中按部就班和机械模仿将逐渐被智能机器所取代，而无法被取代的将是人区别于机器独有的创造力和对新知的探求利用。<br/>
+
+<br/>
+
+          我们是一家不断探索最前沿技术，并在第一时间转化为STEAM教育产品的科技公司。我们不用等上十年，找到“最酷的工作”。现在就可以开始，大展拳脚，将最前沿的科技，变成自己创造的产品CocoRobo现已推出<del>机器人系列、AR系列、积木套件</del>，将他们带入年轻一代的课堂。与全球前沿科技一起，将技术、思考、设计、游戏融入独一无二的创造中，迎接个人制造时代。<br/>
+
+<br/>
+
+我们希望成为现有教育体系的补充，引入全新的理念和知识，在玩中学，在动手中了解世界。<br/>
+
+<h3 id='WYeACABR3Yx'>4.2 口号</h3>
+
+<div data-section-style='5'><ul id='WYeACAW5qUq'><li id='WYeACAkmu9m' class='' value='1'>我们的口号是：Make for fun，Play to learn（为乐趣而创造，边玩边学）
+
+<br/></li><li id='WYeACArGexi' class='parent'>我建议可以加一个influencer(像Linkedin一样），加入Edison，  <a href="https://en.wikipedia.org/wiki/Seymour_Papert">Seymour Papert</a>，Hiroshi Ishii，Elon Musk, Steve Jobs，王澍，徐冰等人的理念一句话介绍，头像和鸡汤为我们背书。
+
+<br/></li><ul><li id='WYeACAw4ZIq' class=''>王澍（建筑师）：<a href="https://www.zhihu.com/question/20090684">https://www.zhihu.com/question/20090684</a>
+
+<br/></li><li id='WYeACACOwiu' class=''>徐冰（艺术家）：<a href="http://blog.sina.com.cn/s/blog_4c4ceaeb0100t9c2.html">http://blog.sina.com.cn/s/blog_4c4ceaeb0100t9c2.html</a>
+
+<br/></li><li id='WYeACANy3ga' class=''>Steve Jobs（企业家）:
+
+<br/></li><li id='WYeACAyXDay' class=''>Elon Musk（企业家）：
+
+<br/></li><li id='WYeACAeSX5C' class=''> <a href="https://en.wikipedia.org/wiki/Seymour_Papert">Seymour Papert</a>（计算机科学家）：
+
+<br/></li><li id='WYeACArczHS' class=''>Hiroshi Ishii（人机交互科学家）：
+
+<br/></li><li id='WYeACA5L25d' class='parent'>Norbert Wiener: Function Follow Form <a href="https://www.youtube.com/watch?v=6BJdY1mdSSA">https://www.youtube.com/watch?v=6BJdY1mdSSA</a>
+
+<br/></li><ul><li id='WYeACAARlqL' class=''>Hartmut Esslinger: Form follows emotion <a href="http://www.design-emotion.com/2006/08/15/getting-emotional-with-hartmut-esslinger/">http://www.design-emotion.com/2006/08/15/getting-emotional-with-hartmut-esslinger/</a>
+
+<br/></li></ul><li id='WYeACApsgaQ' class=''>Jonathan Ive
+
+<br/></li></ul></ul></div><h3 id='WYeACAyhkn0'>4.3 团队</h3>
+
+<br/>
+
+<h2 id='WYeACAqpQny'>5 商城</h2>
+
+<div data-section-style='5'><ul id='WYeACABHvoV'><li id='WYeACANsbI1' class='' value='1'>(To be edited)
+
+<br/></li></ul></div><br/>
+
+↓↓↓<br/>
+
+<h2 id='WYeACAVXYik'>Footer</h2>
+
+<hr/><h3 id='WYeACAqAC60'>courses  课程</h3>
+
+学校系统解决方案/专业老师对接指导<br/>
+
+<hr/>工具：图形化编程（编程）<br/>
+
+课程的内容以剧情的模式切入，以 Project based Learning 的方式完成任务（编程猫）<br/>
+
+<br/>
+
+面向的用户：小学的信息技术课<br/>
+
+<br/>
+
+课程设计：<br/>
+
+一种方式是类似一个个教程类的方式，形式上比较松散，没有一定的体系。可以按照对象（Subject）、难易程度（Grade level）、类型（Robots/Accessories）进行分类。<br/>
+
+优点是可以很容易的添加课程，用户也可以添加进来。下面两张图片都是这种类型，适用于社区形式，比较适合自学，适合单独一次的课程。<br/>
+
+缺点是结构上比较松散，可能不太适合进行系统的教学（不过如果对这些课程进行整理可能也适合，就是进行二次加工）。所以这种方式可能适合于作为课程的素材。<br/>
+
+<div data-section-style='11' style='max-width:100%'><img src='https://quip.com/blob/WYeAAA1nhIR/qXpw0feuflQwTBWxEq2gDg?a=Fxlar7NgHl24evPqRlRNTJzrcaOXLSm4CJsxvLpW91Qa' id='WYeACAYvNAb' alt='' width='800' height='244'></img></div><div data-section-style='11' style='max-width:100%'><img src='https://quip.com/blob/WYeAAA1nhIR/loYqaeLn6lXHfx69g5vgAQ?a=akunaOYKlmb93aaCeMutUArK4qWnaB09OGLgnV5HF7Qa' id='WYeACAt5LNb' alt='' width='800' height='375'></img></div><br/>
+
+课程的类型：<br/>
+
+一种是编程类的，如编程猫<br/>
+
+一种是设计类的，三维设计、结构设计、电路设计<br/>
+
+一种是工程类的，动手操作（适合线下）<br/>
+
+<br/>
+
+<h2 id='WYeACAqZw3h'></h2>
+
+<hr/><h2 id='WYeACAtOREJ'>参考</h2>
+
+<blockquote id='WYeACAtSKrv'>现阶段先不需要把操作步骤放在网上（以免竞争对手抄袭），但未来是一个需要做的工作。 <a href="https://www.makewonder.com/start">https://www.makewonder.com/start</a></blockquote>
+
+<br/>
+
+<blockquote id='WYeACAlxDqw'>多参考下《竞品》里总结好的公司，基本上都是跟我们密切相关的，里面有不少了。</blockquote>
+
+<h3 id='WYeACAEOxSd'>worth referencing (VISUAL &amp; site structure)</h3>
+
+<div data-section-style='5'><ul id='WYeACAfCtbO'><li id='WYeACAc1MUW' class='parent' value='1'><b>Wonder Workshop</b>
+
+<br/></li><ul><li id='WYeACAWvl0g' class=''><a href="https://www.makewonder.com/">https://www.makewonder.com/</a>
+
+<br/></li><li id='WYeACAucPr3' class=''>Meet Dat and dosh, your child's first robot friends.
+
+<br/></li><li id='WYeACAk4OEO' class=''>Code is the modern day superpower
+
+<br/></li><li id='WYeACAGQFDs' class=''>With Robotics, Coding become the language of play
+
+<br/></li><li id='WYeACAMfJ6D' class=''>Media Kit <a href="https://drive.google.com/folderview?id=0B0WfNM4WtK2oSG5uRVpRc2UzRnM&amp;usp=sharing">https://drive.google.com/folderview?id=0B0WfNM4WtK2oSG5uRVpRc2UzRnM&amp;usp=sharing</a>
+
+<br/></li></ul></ul></div><div data-section-style='5'><ul id='WYeACAlO7y1'><li id='WYeACAte5de' class='' value='1'><b>Wonder Workshop</b>
+
+<br/></li><li id='WYeACABxBls' class=''><a href="https://www.makewonder.com/">https://www.makewonder.com/</a>
+
+<br/></li><li id='WYeACAtYfjl' class='parent'><b>Google Project Bloks</b>
+
+<br/></li><ul><li id='WYeACALvb7C' class=''><a href="https://projectbloks.withgoogle.com">https://projectbloks.withgoogle.com</a>
+
+<br/></li></ul><li id='WYeACAhaSMy' class='parent'><b>Littlebits</b>
+
+<br/></li><ul><li id='WYeACAM3yJD' class=''><a href="http://littlebits.cc">http://littlebits.cc</a>
+
+<br/></li></ul><li id='WYeACAIGBFA' class='parent'><b>Sphero Education</b>
+
+<br/></li><ul><li id='WYeACA50u8x' class=''><a href="http://www.sphero.com/education">http://www.sphero.com/education</a>
+
+<br/></li><li id='WYeACAxYBLU' class=''>Make everyday the best day of school
+
+<br/></li></ul><li id='WYeACAk86QS' class='parent'><b>Raspberry Pi Education</b>
+
+<br/></li><ul><li id='WYeACAPbbQa' class=''><a href="https://www.raspberrypi.org/education/">https://www.raspberrypi.org/education/</a>
+
+<br/></li></ul><li id='WYeACAHMiX1' class='parent'><b>Microduino</b>
+
+<br/></li><ul><li id='WYeACAnnDut' class=''><a href="https://www.microduino.cc">https://www.microduino.cc</a>
+
+<br/></li></ul><li id='WYeACA0AHfC' class='parent'><b>Wove</b>
+
+<br/></li><ul><li id='WYeACALonpm' class=''> <a href="http://wove.com/">http://wove.com/</a>
+
+<br/></li></ul><li id='WYeACAaj783' class=''>NUVU Studio
+
+<br/></li><li id='WYeACAlPBjX' class=''><a href="https://cambridge.nuvustudio.com/">https://cambridge.nuvustudio.com/</a>
+
+<br/></li><li id='WYeACAztiXu' class='parent'><b>Roboterra</b>
+
+<br/></li><ul><li id='WYeACAA2kZC' class=''><a href="http://www.roboterra.com.cn/#page1">http://www.roboterra.com.cn/</a>
+
+<br/></li><li id='WYeACAorbfn' class=''>动手改变世界：机器人教育最好的方式，硬件课程与认知心理学的交互式设计
+
+<br/></li><li id='WYeACA40q1N' class=''>应对变化的世界，机器人教育让你更胜一筹
+
+<br/></li><li id='WYeACAacdfS' class=''>迄今为止，最完美的机器人教育套件
+
+<br/></li><li id='WYeACAoSALQ' class=''>萝卜太辣的用户反馈不错：听听学生怎么说
+
+<br/></li></ul><li id='WYeACAkrP1K' class='parent'><b>Mail Chimp Pro</b>
+
+<br/></li><ul><li id='WYeACA8fbZ0' class=''><a href="http://mailchimp.com/pro/?ref=land-book.com">http://mailchimp.com/pro/</a>
+
+<br/></li></ul><li id='WYeACAJGsDT' class='parent'><b>Magic Co (concept)</b>
+
+<br/></li><ul><li id='WYeACAAcegO' class=''><a href="https://dribbble.com/shots/2719343-magic-co-landing-page-concept">https://dribbble.com/shots/2719343-magic-co-landing-page-concept</a>
+
+<br/></li></ul><li id='WYeACAlifhP' class='parent'><b>Magic Leap</b>
+
+<br/></li><ul><li id='WYeACA73AkZ' class=''><a href="http://magicleap.com">http://magicleap.com</a>
+
+<br/></li><li id='WYeACAsZVgP' class=''>Slogan: New ways to create, new ways to learn. 
+
+<br/></li><li id='WYeACA5X3cV' class=''>bring magic back into the world
+
+<br/></li></ul><li id='WYeACAKDJDd' class=''><b>Makerblock</b>
+
+<br/></li></ul></div><div data-section-style='5'><ul id='WYeACA6AaGz'><ul><li id='WYeACAJYYqM' class='' value='1'>从“小想法”到“大创意”的开源开放工程积木搭建平台
+
+<br/></li><li id='WYeACA4d45G' class=''>Makeblock 是一个包含金属积木、电子模块、软件工具等几百种零件的工程积木平台。<br>借助 Makeblock，你可以快速搭建高性能机械结构或者独一无二的机器人，将脑中的奇思妙想变为实物。
+
+<br/></li></ul><li id='WYeACAdzkGn' class='parent'><a href="http://Arduino.org">Arduino.org</a>
+
+<br/></li><ul><li id='WYeACAajriO' class=''><a href="http://www.arduino.org/products/boards/arduino-uno-wifi">http://www.arduino.org/products/boards/arduino-uno-wifi</a>
+
+<br/></li></ul></ul></div><div data-section-style='11'><div class='empty'><img src='data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==' id='WYeACAp4dml' alt='' width='800' height='600' class='image'></img></div></div><h3 id='WYeACACHT6m'>others</h3>
+
+<div data-section-style='5'><ul id='WYeACAnI4an'><li id='WYeACAfX49T' class='parent' value='1'>Makeclub
+
+<br/></li><ul><li id='WYeACA4wvJk' class=''><a href="https://makerclub.org">https://makerclub.org</a>
+
+<br/></li><li id='WYeACARRg6H' class=''>讲的很乱，是个坏典型
+
+<br/></li></ul><li id='WYeACAXHMQh' class='parent'>Fizzly
+
+<br/></li><ul><li id='WYeACA7Xq1E' class=''><a href="http://www.fizz.ly">http://www.fizz.ly</a>
+
+<br/></li><li id='WYeACAhev50' class=''><a href="https://www.kickstarter.com/projects/fizzly/fizzly-the-first-creative-smart-tag-to-enhance-you">https://www.kickstarter.com/projects/fizzly/fizzly-the-first-creative-smart-tag-to-enhance-you</a>
+
+<br/></li></ul><li id='WYeACAWCHzm' class='parent'>CoDrone
+
+<br/></li><ul><li id='WYeACApPvzg' class=''><a href="http://community.robolink.com/getting-started/">http://community.robolink.com/getting-started/</a>
+
+<br/></li></ul></ul></div><h3 id='WYeACAOw2p6'></h3>
+
+</body></html>
