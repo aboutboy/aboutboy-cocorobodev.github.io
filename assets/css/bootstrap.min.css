@@ -1820,6 +1820,7 @@ fieldset[disabled] .btn {
 .btn-default:active,
 .btn-default.active,
 .open .dropdown-toggle.btn-default {
+    color:#444;
     background-color: #d30c59 !important;
     border-color: #adadad
 }
@@ -1856,7 +1857,7 @@ fieldset[disabled] .btn-default.active {
 .btn-primary:active,
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
-    color: #fff;
+    color: #444;
     background-color: #3276b1;
     border-color: #285e8e
 }
@@ -1893,7 +1894,7 @@ fieldset[disabled] .btn-primary.active {
 .btn-warning:active,
 .btn-warning.active,
 .open .dropdown-toggle.btn-warning {
-    color: #fff;
+    color: #444;
     background-color: #ed9c28;
     border-color: #d58512
 }
@@ -1930,7 +1931,7 @@ fieldset[disabled] .btn-warning.active {
 .btn-danger:active,
 .btn-danger.active,
 .open .dropdown-toggle.btn-danger {
-    color: #fff;
+    color: #444;
     background-color: #d2322d;
     border-color: #ac2925
 }
@@ -1967,7 +1968,7 @@ fieldset[disabled] .btn-danger.active {
 .btn-success:active,
 .btn-success.active,
 .open .dropdown-toggle.btn-success {
-    color: #fff;
+    color: #444;
     background-color: #47a447;
     border-color: #398439
 }
@@ -2004,13 +2005,14 @@ fieldset[disabled] .btn-success.active {
 .btn-info:active,
 .btn-info.active,
 .open .dropdown-toggle.btn-info {
-    color: #fff;
+    color: #444;
     background-color: #39b3d7;
     border-color: #269abc
 }
 .btn-info:active,
 .btn-info.active,
 .open .dropdown-toggle.btn-info {
+    color:#444;
     background-image: none
 }
 .btn-info.disabled,
@@ -2746,9 +2748,11 @@ input[type="button"].btn-block {
     position: relative
 }
 .dropdown-toggle:focus {
+    color:#444;
     outline: 0
 }
 .dropdown-menu {
+    color: #222;
     position: absolute;
     top: 100%;
     left: 0;
@@ -2757,7 +2761,7 @@ input[type="button"].btn-block {
     float: left;
     min-width: 160px;
     padding: 5px 0;
-    margin: 2px 0 0;
+    margin: 10px 0 0;
     font-size: 14px;
     list-style: none;
     background-color: #fff;
@@ -2766,7 +2770,7 @@ input[type="button"].btn-block {
     border-radius: 4px;
     -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-    background-clip: padding-box
+    background-clip: padding-box;
 }
 .dropdown-menu.pull-right {
     right: 0;
@@ -2789,14 +2793,15 @@ input[type="button"].btn-block {
 }
 .dropdown-menu>li>a:hover,
 .dropdown-menu>li>a:focus {
-    color: #fff;
+    
+    color: #222;
     text-decoration: none;
-    background-color: #428bca
+    background-color: #fff;
 }
 .dropdown-menu>.active>a,
 .dropdown-menu>.active>a:hover,
 .dropdown-menu>.active>a:focus {
-    color: #fff;
+    color: #222;
     text-decoration: none;
     background-color: #428bca;
     outline: 0
@@ -3785,8 +3790,8 @@ textarea.input-group-sm>.input-group-btn>.btn {
 .navbar-default .navbar-nav>.open>a,
 .navbar-default .navbar-nav>.open>a:hover,
 .navbar-default .navbar-nav>.open>a:focus {
-    color: #555;
-    background-color: #e7e7e7
+    color: #666;
+    background-color: rgba(255,255,255,0);
 }
 .navbar-default .navbar-nav>.open>a .caret,
 .navbar-default .navbar-nav>.open>a:hover .caret,
@@ -3904,13 +3909,13 @@ textarea.input-group-sm>.input-group-btn>.btn {
     }
     .navbar-inverse .navbar-nav .open .dropdown-menu>li>a:hover,
     .navbar-inverse .navbar-nav .open .dropdown-menu>li>a:focus {
-        color: #fff;
+    color: #222;
         background-color: transparent
     }
     .navbar-inverse .navbar-nav .open .dropdown-menu>.active>a,
     .navbar-inverse .navbar-nav .open .dropdown-menu>.active>a:hover,
     .navbar-inverse .navbar-nav .open .dropdown-menu>.active>a:focus {
-        color: #fff;
+    color: #222;
         background-color: #080808
     }
     .navbar-inverse .navbar-nav .open .dropdown-menu>.disabled>a,
@@ -3924,7 +3929,8 @@ textarea.input-group-sm>.input-group-btn>.btn {
     color: #999
 }
 .navbar-inverse .navbar-link:hover {
-    color: #fff
+    
+    color: #222;
 }
 .breadcrumb {
     padding: 8px 15px;
@@ -4234,6 +4240,9 @@ a.list-group-item.active>.badge,
 a.thumbnail:hover,
 a.thumbnail:focus {
     border-color: #428bca
+}
+a.dropdown-toggle{
+    color:#444;
 }
 .thumbnail>img {
     margin-right: auto;
