@@ -2,7 +2,7 @@ body{font-family:Poppins,Arial sans-serif,'Hiragino Sans GB';font-size:14px;line
 
 .hero-image-1{margin-bottom:0px}
 .hero-image-1 #home{background:url(../../assets/images/code_pexels.jpg) center no-repeat;position:relative;width:100%;background-size:cover;overflow:hidden}
-.hero-overlay-1{background:rgba(0,0,0,.75);height:840px;top:0;left:0;bottom:0;right:0}
+.hero-overlay-1{background:rgba(0,0,0,.75);height:540px;top:0;left:0;bottom:0;right:0}
 
 .hero-image-2{margin-bottom:0px}
 .hero-image-2 #home{background:url(https://static.pexels.com/photos/59628/pexels-photo-59628.jpeg) center no-repeat;position:relative;width:100%;background-size:cover;overflow:hidden}
