@@ -21,7 +21,7 @@ body{font-family:Poppins,Arial sans-serif,'Hiragino Sans GB';font-size:14px;line
 
 /* Sections */
 
-.hero-image-p1{margin-bottom:70px}
+.hero-image-p1{margin-bottom:0px}
 .hero-image-p1 #home{background:url(../../assets/images/module_bg.jpg) center no-repeat;position:relative;width:100%;background-size:cover;overflow:hidden}
 .hero-overlay-p1{background:rgba(0,0,0,.9);height:480px;top:0;left:0;bottom:0;right:0}
 
