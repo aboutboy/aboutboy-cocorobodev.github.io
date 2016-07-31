@@ -16,14 +16,44 @@ body{font-family:Poppins,Arial sans-serif,'Hiragino Sans GB';font-size:14px;line
 .hero-image-4 #home{background:url(../../assets/images/light_pack.jpg) center no-repeat;position:relative;width:100%;background-size:cover;overflow:hidden}
 .hero-overlay-4{background:rgba(0,0,0,.75);height:820px;top:0;left:0;bottom:0;right:0}
 
+/* Wasss up */
+
+.hero-image-w1{}
+.hero-image-w1 #home{background:url(https://c2.staticflickr.com/2/1258/1279750389_33c29cdde9_o.jpg) center no-repeat;position:relative;width:100%;background-size:cover;overflow:hidden}
+.hero-overlay-w1{background:rgba(255,255,255,1);height:480px;top:0;left:0;bottom:0;right:0}
+
+.main-message-left-w1{
+	position:absolute;text-align:left;
+	top:50%;transform:translateY(-50%);
+	-o-transform:translateY(-50%);
+	-webkit-transform:translateY(-50%);
+	-moz-transform:translateY(-50%);
+	-ms-transform:translateY(-50%);
+	width:100%;
+	color:#222;}
+
+.main-message-left-w1 h1{font-family:Poppins,Arial sans-serif;font-weight:800;font-size:80px;color:#222;}
+
+.main-message-right-w1{
+	position:absolute;text-align:right;
+	top:50%;transform:translateY(-50%);
+	-o-transform:translateY(-50%);
+	-webkit-transform:translateY(-50%);
+	-moz-transform:translateY(-50%);
+	-ms-transform:translateY(-50%);
+	width:100%}
+
+.main-message-right-w1 h1{font-family:Poppins,Arial sans-serif;font-weight:800;font-size:80px;color:#222}
+
+/* Wasss up EOF */
 
 #education-larger-ls { font-size:30px; }
 
 /* Sections */
 
-.hero-image-p1{margin-bottom:0px}
-.hero-image-p1 #home{background:url(../../assets/images/module_bg.jpg) center no-repeat;position:relative;width:100%;background-size:cover;overflow:hidden}
-.hero-overlay-p1{background:rgba(0,0,0,.9);height:480px;top:0;left:0;bottom:0;right:0}
+.hero-image-w1{}
+.hero-image-w1 #home{background:url(../../assets/images/module_bg.jpg) center no-repeat;position:relative;width:100%;background-size:cover;overflow:hidden}
+.hero-overlay-w1{background:rgba(255,255,255,1);height:480px;top:0;left:0;bottom:0;right:0}
 
 /* Quotes */
 
