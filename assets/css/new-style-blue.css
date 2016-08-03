@@ -8,9 +8,9 @@ body{font-family:font-family:Poppins,Helvetica,'PingFang SC','Hiragino Sans GB',
 .hero-image-1 #home{background:url(../../assets/images/code_pexels.jpg) center no-repeat;position:relative;width:100%;background-size:cover;overflow:hidden}
 .hero-overlay-1{background:rgba(30,144,255,.8);height:540px;top:0;left:0;bottom:0;right:0}
 
-.hero-image-2{margin-bottom:75px}
+.hero-image-2{margin-bottom:0px}
 .hero-image-2 #home{background:url(../../assets/images/edutainment_bg.jpg) center no-repeat;position:relative;width:100%;background-size:cover;overflow:hidden}
-.hero-overlay-2{background:rgba(0,0,0,.75);height:640px;top:0;left:0;bottom:0;right:0}
+.hero-overlay-2{background:rgba(255,215,0,.9);height:640px;top:0;left:0;bottom:0;right:0}
 
 .hero-image-3{margin-bottom:30px}
 .hero-image-3 #home{background:url(../../assets/images/module_bg.jpg) center no-repeat;position:relative;width:100%;background-size:cover;overflow:hidden}
@@ -18,11 +18,11 @@ body{font-family:font-family:Poppins,Helvetica,'PingFang SC','Hiragino Sans GB',
 
 .hero-image-4{margin-bottom:0px}
 .hero-image-4 #home{background:url(../../assets/images/packs_bg.jpg) center no-repeat;position:relative;width:100%;background-size:cover;overflow:hidden}
-.hero-overlay-4{background:rgba(0,0,0,.5);height:540px;top:0;left:0;bottom:0;right:0}
+.hero-overlay-4{background:rgba(0,0,0,.5);height:720px;top:0;left:0;bottom:0;right:0}
 
 .hero-image-5{margin-bottom:75px}
 .hero-image-5 #home{background:url(../../assets/images/packs_bg.jpg) center no-repeat;position:relative;width:100%;background-size:cover;overflow:hidden}
-.hero-overlay-5{background:rgba(0,0,0,.5);height:640px;top:0;left:0;bottom:0;right:0}
+.hero-overlay-5{background:rgba(0,0,0,.5);height:720px;top:0;left:0;bottom:0;right:0}
 
 /* Wasss up */
 
@@ -67,7 +67,7 @@ body{font-family:font-family:Poppins,Helvetica,'PingFang SC','Hiragino Sans GB',
 
 .hero-image-q1{}
 .hero-image-q1 #home{background:url(https://c2.staticflickr.com/2/1258/1279750389_33c29cdde9_o.jpg) center no-repeat;position:relative;width:100%;background-size:cover;overflow:hidden}
-.hero-overlay-q1{background:rgba(0,0,0,.75);height:480px;top:0;left:0;bottom:0;right:0}
+.hero-overlay-q1{background:rgba(0,0,0,.75);height:640px;top:0;left:0;bottom:0;right:0}
 
 .hero-image-q2{}
 .hero-image-q2 #home{background:url(https://c1.staticflickr.com/9/8018/7263883898_157b7d5b69_b.jpg) center no-repeat;position:relative;width:100%;background-size:cover;overflow:hidden}
