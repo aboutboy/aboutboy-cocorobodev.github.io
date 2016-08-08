@@ -38,6 +38,10 @@ body{font-family:font-family:Poppins,Helvetica,'PingFang SC','Hiragino Sans GB',
 .hero-image-a4 #home{background:url(../../assets/images/hero_img_6.jpg) center no-repeat;position:relative;width:100%;background-size:cover;overflow:hidden}
 .hero-overlay-a4{background:rgba(0,0,0,.6);height:500px;top:0;left:0;bottom:0;right:0}
 
+.hero-image-a6{margin-bottom:0px;margin-top:80px;}
+.hero-image-a6 #home{background:url(../../assets/images/hero_img_5.jpg) center no-repeat;position:relative;width:100%;background-size:cover;overflow:hidden}
+.hero-overlay-a6{background:rgba(0,0,0,.6);height:500px;top:0;left:0;bottom:0;right:0}
+
 .hero-image-a5{margin-bottom:50px}
 .hero-image-a5 #home{background:url(../../assets/images/hero_img_5.jpg) center no-repeat;position:relative;width:100%;background-size:cover;overflow:hidden}
 .hero-overlay-a5{background:rgba(0,0,0,.6);height:500px;top:0;left:0;bottom:0;right:0}
