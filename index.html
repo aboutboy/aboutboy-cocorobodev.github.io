@@ -1,514 +1,1381 @@
-<!doctype html>
-<html><head><title>Join Us @ CocoRobo in Shenzhen</title><meta charset="UTF-8"><link rel="stylesheet" href="http://fonts.lug.ustc.edu.cn/css?family=Crimson+Text:400,400italic,700,700italic|Roboto:400,700,700italic,400italic" type="text/css"><style>/*
- * Copyright 2014 Quip
- *
- * Licensed under the Apache License, Version 2.0 (the "License"); you may
- * not use this file except in compliance with the License. You may obtain
- * a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
- * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
- * License for the specific language governing permissions and limitations
- * under the License.
- */
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>CocoRobo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=9, IE=edge" />
+    <meta name='robots' content='noindex,follow' />
 
-body {
-    font-size: 15px;
-    color: #333;
-    background: #fff;
-    padding: 60px 95px;
-    max-width: 900px;
-    margin: 0 auto;
-    text-rendering: optimizeLegibility;
-    font-feature-settings: "kern";
-    font-kerning: normal;
-    -moz-font-feature-settings: "kern";
-    -webkit-font-feature-settings: "kern";
-}
+    <link rel='stylesheet' id='bootstrap-css'  href='assets/css/bootstrap.min.css?ver=4.4.1' type='text/css' media='screen' />
+    <link href='https://fonts.lug.ustc.edu.cn/css?family=Poppins:400,300,500,600,700&subset=latin,devanagari,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.lug.ustc.edu.cn/css?family=Playfair+Display:700,900|Fira+Sans:400,400italic' rel='stylesheet' type='text/css'>
+    <link rel='stylesheet' id='fontawesome-css'  href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css?ver=4.4.1' type='text/css' media='all' />
+    <!--<link rel='stylesheet' id='style-css'  href='assets/css/new-style.css' type='text/css' media='all' />-->
+    <link rel="stylesheet" href="assets/css/animate.css" type='text/css' media='all'>
+    <script type='text/javascript' src='assets/js/jquery.js'></script>        
+    <link type="text/css" rel="stylesheet" id="flexible-switch" href="assets/css/new-style-blue.css" />
+    <link rel="shortcut icon" href="ico.ico">
 
-/* Headings */
-h1, h2, h3, th {
-    font-family: Roboto, sans-serif;
-    font-weight: 700;
-    margin: 0;
-    margin-top: 1.25em;
-    margin-bottom: 0.75em;
-}
+    <!-- <link rel="stylesheet" href="assets/css/additional/reset.css"> -->
+    <!--<link rel="stylesheet" href="assets/css/additional/style.css"> -->
+    <!--<link rel="stylesheet" href="assets/css/carousel.css" rel="stylesheet">-->
+    <style>
+	
+	/* For Demo Purposes Only ( You can delete this anytime :-) */
+	#colour-variations {
+		padding: 10px;
+		-webkit-transition: 0.5s;
+	  	-o-transition: 0.5s;
+	  	transition: 0.5s;
+		width: 140px;
+		position: fixed;
+		left: 0;
+		top: 100px;
+		z-index: 999999;
+		background: #fff;
+		/*border-radius: 4px;*/
+		border-top-right-radius: 4px;
+		border-bottom-right-radius: 4px;
+		-webkit-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		-moz-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		-ms-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+	}
+	#colour-variations.sleep {
+		margin-left: -140px;
+	}
+	#colour-variations h3 {
+		text-align: center;;
+		font-size: 11px;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		color: #777;
+		margin: 0 0 10px 0;
+		padding: 0;;
+	}
 
-h1 {
-    font-size: 35px;
-    line-height: 42px;
-}
+	#colour-variations ul,
+	#colour-variations ul li {
+		padding: 0;
+		margin: 0;
+	}
+	#colour-variations ul {
+		float: left;	
+	}
+	#colour-variations li {
+		list-style: none;
+		display: inline;
+	}
+	#colour-variations li a {
+		width: 20px;
+		height: 20px;
+		position: relative;
+		float: left;
+		margin: 5px;
+	}
 
-h1:first-child {
-    margin-top: 0;
-}
 
-h2 {
-    font-size: 18px;
-    line-height: 22px;
-}
 
-h3 {
-    text-transform: uppercase;
-    font-size: 13px;
-    line-height: 16px;
-}
+	#colour-variations li a[data-theme="../assets/css/new-style-blue"] {
+		background: #0785f2;
+	}
+	#colour-variations li a[data-theme="../assets/css/new-style-green"] {
+		background: #6e85c1;
+	}
+	#colour-variations li a[data-theme="../assets/css/new-style-yellow"] {
+		background: #9261d4;
+	}
+	#colour-variations li a[data-theme="../assets/css/new-style-red"] {
+		background: #f25454;
+	}
+	#colour-variations li a[data-theme="../assets/css/new-style-orange"] {
+		background: orange;
+	}
 
-/* Body text */
-body, p, ul, ol, td {
-    font-family: 'Crimson Text', serif;
-    font-size: 16px;
-    line-height: 20px;
-}
+	.option-toggle {
+		position: absolute;
+		right: 0;
+		top: 0;
+		margin-top: 5px;
+		margin-right: -30px;
+		width: 30px;
+		height: 30px;
+		background: #fff;
+		text-align: center;
+		border-top-right-radius: 4px;
+		border-bottom-right-radius: 4px;
+		color: #0785f2;
+		cursor: pointer;
+		-webkit-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		-moz-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		-ms-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+	}
+	.option-toggle i {
+		top: 5px;
+		position: relative;
+	}
+	.option-toggle:hover, .option-toggle:focus, .option-toggle:active {
+		color:  #0785f2;
+		text-decoration: none;
+		outline: none;
+	}
+    .fa-2x {
+    font-size: 1.5em;
+    }
 
-blockquote, q {
-    display: block;
-    margin: 1em 0;
-    font-style: italic;
-}
+    .menu-primary-menu-container { font-family: 'Poppins';font-weight: 700; }
+    .features{padding-top:10px;}
 
-blockquote a, q a {
-    text-decoration: underline;
+    .container-fluid.full-width {
+    padding-left: 0;
+    padding-right: 0;
+    overflow-x: hidden;
 }
-
-blockquote {
-    padding-left: 10px;
-    border-left: 4px solid #a6a6a6;
+.row.row-no-gutter {
+    margin: 0
 }
-
-q {
-    color: #a6a6a6;
-    line-height: 40px;
-    font-size: 24px;
-    text-align: center;
-    quotes: none;
+.row.row-no-gutter [class*="col-"] {
+    padding: 0
 }
-
-q a {
-    color: #a6a6a6;
-}
-
-code, pre {
-    font-family: Consolas, "Liberation Mono", Menlo, "Courier Prime Web", Courier, monospace;
-    background: #f3f3f3;
-}
-
-code {
-    padding: 1px;
-    margin: 0 -1px;
-    border-radius: 3px;
-}
-
-pre {
-    display: block;
-    line-height: 20px;
-    text-shadow: 0 1px white;
-    padding: 5px 5px 5px 30px;
-    white-space: nowrap;
-    position: relative;
-    margin: 1em 0;
-}
-
-pre:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 15px;
-    border-left: solid 1px #dadada;
-}
-
-/* Lists */
-div[data-section-style="5"],
-div[data-section-style="6"],
-div[data-section-style="7"] {
-    margin: 12px 0;
-}
-
-ul {
-    padding: 0 0 0 40px;
-}
-
-ul li {
-    margin-bottom: 0.4em;
-}
-
-/* Bulleted list */
-div[data-section-style="5"] ul {
-    list-style-type: disc;
-}
-div[data-section-style="5"] ul ul {
-    list-style-type: circle;
-}
-div[data-section-style="5"] ul ul ul {
-    list-style-type: square;
-}
-div[data-section-style="5"] ul ul ul ul {
-    list-style-type: disc;
-}
-div[data-section-style="5"] ul ul ul ul ul {
-    list-style-type: circle;
-}
-div[data-section-style="5"] ul ul ul ul ul ul {
-    list-style-type: square;
-}
-
-/* Numbered list */
-div[data-section-style="6"] ul {
-    list-style-type: decimal;
-}
-div[data-section-style="6"] ul ul {
-    list-style-type: lower-alpha;
-}
-div[data-section-style="6"] ul ul ul {
-    list-style-type: lower-roman;
-}
-div[data-section-style="6"] ul ul ul ul {
-    list-style-type: decimal;
-}
-div[data-section-style="6"] ul ul ul ul ul {
-    list-style-type: lower-alpha;
-}
-div[data-section-style="6"] ul ul ul ul ul ul {
-    list-style-type: lower-roman;
-}
-
-/* Checklist */
-div[data-section-style="7"] ul {
-    list-style-type: none;
-}
-
-div[data-section-style="7"] ul li:before {
-    content: "\2610";
-    position: absolute;
-    display: inline;
-    margin-right: 1.2em;
-    margin-left: -1.2em;
-}
-
-div[data-section-style="7"] ul li.parent:before {
-    content: "";
-}
-
-div[data-section-style="7"] ul li.parent {
-    font-weight: bold;
-}
-
-div[data-section-style="7"] ul li.checked {
-    text-decoration: line-through;
-}
-
-div[data-section-style="7"] ul li.checked:before {
-    content: "\2611";
-    text-decoration: none;
-}
-
-/* Tables */
-div[data-section-style="8"] {
-    margin: 12px 0;
-}
-
-table {
-    border-spacing: 0;
-    border-collapse: separate;
-    border: solid 1px #7c7c7c;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, .25);
-    table-layout: fixed;
-    position: relative;
-}
-
-table th, table td {
-    padding: 2px 2px 0;
-    min-width: 1.5em;
-    word-wrap: break-word;
-}
-
-table th {
-    border-bottom: 1px solid #ccc;
-    background: #f0f0f0;
-    font-weight: bold;
-    vertical-align: bottom;
-    color: #3a4449;
-    text-align: center;
-}
-
-table td {
-    padding-top: 0;
-    border-left: 1px solid #e1e1e1;
-    border-top: 1px solid #e1e1e1;
-    vertical-align: top;
-}
-
-table td.bold {
-    font-weight: bold;
-}
-
-table td.italic {
-    font-style: italic;
-}
-
-table td.underline {
-    text-decoration: underline;
-}
-
-table td.strikethrough {
-    text-decoration: line-through;
-}
-
-table td.underline.strikethrough {
-    text-decoration: underline line-through;
-}
-
-table td:first-child {
-    border-left: hidden;
-}
-
-table tr:first-child td {
-    border-top: hidden;
-}
-
-/* Images */
-div[data-section-style="11"] {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-div[data-section-style="11"][data-section-float="0"] {
-    clear: both;
-    text-align: center;
-}
-
-div[data-section-style="11"][data-section-float="1"] {
-    float: left;
-    clear: left;
-    margin-right: 20px;
-}
-
-div[data-section-style="11"][data-section-float="2"] {
-    float: right;
-    clear: right;
-    margin-left: 20px;
-}
-
-div[data-section-style="11"] img {
-    display: block;
-    max-width: 100%;
+.img-full-width {
+    width: 100.5%;
     height: auto;
-    margin: auto;
+}
+.has-inner .row.row-no-gutter {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+.row.row-no-gutter .inner {
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-hr {
-    width: 70px;
-    margin: 20px auto;
-}
-</style></head><body>
-
-<div id="google_translate_element"></div><script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'zh-CN', includedLanguages: 'de,en,ja', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-}
-</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-<h1 id='XNLACAhvX6j'>Join Us @ CocoRobo in Shenzhen</h1>
-
-<hr/><div data-section-style='11' style='max-width:100%'><img src='https://quip.com/blob/XNLAAA0qTzA/5qI_lWDqvDlwL3bbIOi4fA?a=xjzrgfzQgB74wHpDWaYaKAXa6qbAe0Hk3oMfiJbPmkca' id='XNLACAuNlkU' alt='' width='800' height='400'></img></div><h2 id='XNLACA81hnd'>关于 CocoRobo</h2>
-
-2016 年 4 月成立于香港，CocoRobo 是一家专注于 STEAM教育（科学，技术，工程，艺术，数学）的教育科技公司。我们的使命是将最新的理念和技术带到 STEAM 教育领域，通过智能硬件和课程体系的完美结合，塑造学生灵活的大脑与双手，掌握面向未来的知识和技能：Empower Kids。<br/>
-
-<br/>
-
-我们的课程涵盖STEAM各个学科，完美地融合了 3D 模型设计，电子电路以及计算机编程，引导学生从无到有地创造一款独一无二的产品，从机器人，到乐器，再到智能家居。创你所爱，造你所想。<br/>
-
-<hr/><h2 id='XNLACAYmwxR'>岗位一：实习软件工程师（偏前端）</h2>
-
-<h3 id='XNLACAKLZSo'>职位要求</h3>
-
-<div data-section-style='6'><ul id='XNLACADKsCc'><li id='XNLACAiaxNc' class='' value='1'>具有很强的适应能力和学习能力；
-
-<br/></li><li id='XNLACAF70Wd' class=''>拥有 1 年以上的 Web 前端开发的项目经验，使用 HTML/CSS/JavaScript 独立开发过小型应用；
-
-<br/></li><li id='XNLACAHTj1E' class=''>注重代码质量，具有良好的代码分析能力，善于总结；
-
-<br/></li><li id='XNLACAjp2tK' class=''>（加分项）使用过 Vue.js/Angular.js/React.js 或相关前端框架开发过项目；
-
-<br/></li><li id='XNLACATnWIN' class=''>（加分项）曾使用过 Unity 进行过 2D/3D 游戏的开发或界面设计；
-
-<br/></li><li id='XNLACAFb42r' class=''>（加分项）曾在开源项目（如 Electron）中有过代码或文档贡献（如有请附上相关链接）；
-
-<br/></li></ul></div><h3 id='XNLACA1ykqx'>工作内容</h3>
-
-<div data-section-style='6'><ul id='XNLACAXUL3s'><li id='XNLACAcTDk3' class='' value='1'>负责通过技术提升用户体验和可用性；
-
-<br/></li><li id='XNLACAcAb2I' class=''>参与主要软件产品线中前端组件的研发；
-
-<br/></li><li id='XNLACAqJk7s' class=''>参与编程相关的课程教学和教材编写；
-
-<br/></li><li id='XNLACAni0ro' class=''>参与 AR 产品（JS in Unity）的功能开发；
-
-<br/></li><li id='XNLACAzBYf9' class=''>参与前端页面开发；
-
-<br/></li></ul></div><h2 id='XNLACArszEu'>岗位二：实习机械建模工程师</h2>
-
-<h3 id='XNLACAwLE9h'>职位要求</h3>
-
-<div data-section-style='6'><ul id='XNLACAvrgEu'><li id='XNLACAaM6Vc' class='' value='1'>具有很强的学习和适应能力；
-
-<br/></li><li id='XNLACALLfgP' class=''>熟悉数字电路以及模拟电路/使用机械绘图软件;
-
-<br/></li><li id='XNLACAfeDRl' class=''>具有良好的沟通能力及动手能力;
-
-<br/></li><li id='XNLACAsYJHc' class=''>（加分项）对工业设计与原型开发有过研究；
-
-<br/></li><li id='XNLACA0bKn8' class=''>（加分项）对 3D 打印机有相关使用或制作经验。
-
-<br/></li></ul></div><h3 id='XNLACAxjSFj'>工作内容</h3>
-
-<div data-section-style='6'><ul id='XNLACAkwCXS'><li id='XNLACAhxWeb' class='' value='1'>3D 模型的建模设计，3D 打印，后期处理；
-
-<br/></li><li id='XNLACAfxazH' class=''>对 3D 打印机进行日常维护；
-
-<br/></li><li id='XNLACApMxLd' class=''>参与 3D 模型设计课程教材编写与课程教学；
-
-<br/></li><li id='XNLACAtYvyd' class=''>参与更新及维护 3D 模型库。
-
-<br/></li></ul></div><h2 id='XNLACAiZR95'>岗位三： 市场实习生</h2>
-
-<h3 id='XNLACAE0VL5'>工作内容：</h3>
-
-<div data-section-style='5'><ul id='XNLACAZPWCr'><li id='XNLACA4ENPJ' class='' value='1'>根据教育科技行业、市场、产品，参与经营战略、销售计划制定；
-
-<br/></li><li id='XNLACAH8lIB' class=''>根据经营战略及销售计划搭建渠道体系，拓展用户及商业合作机会；
-
-<br/></li><li id='XNLACA8QI6U' class=''>负责 STEAM 社区运营策划，包括品牌、核心活动策划，提升学员家长口碑及转化；
-
-<br/></li><li id='XNLACAqRNVg' class=''>协助完成整个 STEAM 课程体系相关服务的搭建，协助商业化产品开发；
-
-<br/></li></ul></div><h3 id='XNLACAKIwUg'>工作要求：</h3>
-
-<div data-section-style='5'><ul id='XNLACANnaU9'><li id='XNLACADYIPO' class='' value='1'>优秀的执行力，有资源整合、组织策划、人际沟通和应变能力；
-
-<br/></li><li id='XNLACA9lG2A' class=''>拥有卓越的商业分析理解能力，沟通、谈判以及演讲技能优秀；
-
-<br/></li><li id='XNLACASx4fm' class=''>良好的快速学习能力、创新意识，以及对前沿教育科技新趋势的理解和实践能力；
-
-<br/></li></ul></div><h2 id='XNLACArmDDH'>我们能给你什么？</h2>
-
-<div data-section-style='6'><ul id='XNLACA9KH4R'><li id='XNLACA7Ma6K' class='' value='1'>真正作为一个职场人参与到工作和创业中，而不是一个实习生打酱油走过场。
-
-<br/></li><li id='XNLACAUjPJA' class=''>我们每天都有新的任务和挑战，一起探索来自 MIT、硅谷的最前沿的科技和教育理念，保证在实习过后在工作和研究能力上有很大的提升。
-
-<br/></li><li id='XNLACAipc3P' class=''>深港两地优质的教育资源合作。学界、业界的无缝联动。
-
-<br/></li><li id='XNLACA8IKCL' class=''>共同创造和引领适应未来的产品和教育。
-
-<br/></li><li id='XNLACAg2K6G' class=''>工作地点在深圳南山区南京大学产学研基地 A 区五楼 ACTLab，工资 150-180 元 /天。
-
-<br/></li></ul></div><hr/><h2 id='XNLACAEz8XL'>往期活动回顾</h2>
-
-香港英华书院、香港中文大学 CINTEC &amp; Pi-Centre 等<br/>
-
-<div data-section-style='11' style='max-width:100%'><img src='https://quip.com/blob/XNLAAA0qTzA/Txm2daOQv5QxK3XJS2geHg?a=fmG6W78NsG8uH9u2Gr5Nb76kVhgVS7IjsQLa6UIlSgEa' id='XNLACAomWiW' alt='' width='800' height='363'></img></div><hr/><h2 id='XNLACAPifkp'>CocoRobo 发展时间线</h2>
-
-<blockquote id='XNLACAP5pob'>自从 2016 年 5 月成立以来取得成绩</blockquote>
-
-<div data-section-style='5'><ul id='XNLACAwZXiK'><li id='XNLACAqb4Yc' class='parent' value='1'>2016.5
-
-<br/></li><ul><li id='XNLACAyJaVs' class=''>入选香港中文大学创业孵化器 
-
-<br/></li></ul><li id='XNLACA8oLSM' class='parent'>2016.7
-
-<br/></li><ul><li id='XNLACAS6eSC' class=''>研发第一款电子模块
-
-<br/></li></ul><li id='XNLACAakwAN' class='parent'>2016. 9
-
-<br/></li><ul><li id='XNLACA28Uqa' class=''>深圳开展线下教学业务
-
-<br/></li></ul><li id='XNLACAPO0TY' class='parent'>2016.10
-
-<br/></li><ul><li id='XNLACACLnmm' class=''>香港张沛松纪念中学开设 3D 打印工作坊
-
-<br/></li></ul><li id='XNLACAFIbaT' class='parent'>2016.11
-
-<br/></li><ul><li id='XNLACABP9MN' class=''>香港开展线下教学业务
-
-<br/></li></ul><li id='XNLACAFMhx1' class='parent'>2016.12
-
-<br/></li><ul><li id='XNLACA9DEIo' class=''>入选深圳 ACT LAB 孵化器，并获得场地和资源支持
-
-<br/></li></ul><li id='XNLACAs4wxa' class='parent'>2017.1
-
-<br/></li><ul><li id='XNLACAL57aq' class=''>深圳STEAM教育寒假班开班
-
-<br/></li><li id='XNLACAGZiZq' class=''>获得香港 TSSSU 创业奖金资助（50 万港币）
-
-<br/></li></ul><li id='XNLACAP6i6R' class='parent'>2017.2
-
-<br/></li><ul><li id='XNLACAdCBQy' class=''>在香港中文大学开设面向大学生的创客工作坊，
-
-<br/></li><li id='XNLACAP9PzL' class=''>计划与香港中文大学，香港大学，麻省理工大学合作，为车联网工程研究提供产品及技术支持
-
-<br/></li></ul><li id='XNLACAGzicX' class='parent'>2017.3
-
-<br/></li><ul><li id='XNLACAgBVJY' class=''>在香港英华书院开设课程
-
-<br/></li><li id='XNLACAqic1O' class=''>计划与香港中文大学合作开设 STEAM 教育香港暑期班 
-
-<br/></li></ul><li id='XNLACAuoP68' class='parent'>2017.4
-
-<br/></li><ul><li id='XNLACABzpGw' class=''>受香港中文大学邀请参加香港环球资源春季电子展
-
-<br/></li><li id='XNLACA2rJIw' class=''>与香港著名国际学校弘立书院签约开设2017-2018学年校内课程。
-
-<br/></li></ul><li id='XNLACAekA8P' class='parent'>2017.5
-
-<br/></li><ul><li id='XNLACA8iSu4' class=''>研发了15+ 款电子模块， 10+ 门课程， 与六家机构展开线下合作
-
-<br/></li><li id='XNLACAakKSj' class=''>与南京市残联及南京普天公司合作规划面向特殊儿童的教育类产品及课程
-
-<br/></li><li id='XNLACAfwtZb' class=''>受香港创新科技学生会邀请合作举办以智慧城市和机器人为主题的学生科技节 
-
-<br/></li></ul></ul></div>
-
-<div align=center style="padding-top:10px;">
-<embed src="https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=a0502wfx9hs&auto=0" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed></div>
-<div align=center style="padding-top:20px;">CocoCity: A Micro-city made out of our products - electronic modules, 3D printing service, for educational and teaching purpose.</div>
-
-<hr/>
-
-<h2 id='XNLACAElM4x'>CEO 介绍</h2>
-
-<div data-section-style='5'><ul id='XNLACAQEeWb'><li id='XNLACArKIZx' class='parent' value='1'>辛海洋博士（Tony），Cocorobo CEO、课程监督兼首席导师。
-
-<br/></li><ul><li id='XNLACA73Ero' class=''>资深创客，拥有多年的机器人教育，程序开发经验。
-
-<br/></li><li id='XNLACA25wv6' class=''>于香港中文大学信息工程专业获取博士学位。
-
-<br/></li><li id='XNLACA5Y84i' class=''>2014-2015 年受 Global Scholarship Programme for Research Excellence 奖学金资助访问麻省理工学院 。
-
-<br/></li><li id='XNLACASXFWu' class=''>在信息技术领域的顶尖会议和学 报上发表论文7篇，获得授权专利 2 项。
-
-<br/></li><li id='XNLACAUZoFP' class=''>在校期间翻译出版著作《开源硬件 DIY：创客实践指南》 -*机械工业出版社*。
-
-<br/></li><li id='XNLACA6fRS7' class=''>在北邮本科期间荣获校级最高创新誉：创新奖壹等奖。
-
-<br/></li><li id='XNLACAEqHpL' class=''>2016 年带领团队入选香港中文大学创业孵化器（Pi Centre）。
-
-<br/></li><li id='XNLACAtC0xW' class=''>2017 年带领团队获得香港 TSSSU 创业资助。
-
-<br/></li><li id='XNLACAvC49d' class=''>更多关于创业的思考请访问微信公众账号：Makerlog
-
-<br/></li></ul></ul></div><hr/><h2 id='XNLACAF7YYF'>联系我们</h2>
-
-如有任何疑问，请不要犹豫联系我们！ <br/>
-
-<div data-section-style='5'><ul id='XNLACAjwPdN'><li id='XNLACAyjGtt' class='' value='1'>邮箱请投递⾄： <a href="mailto:hr@cocorobo.cc">hr@cocorobo.cc</a> 
-
-<br/></li><li id='XNLACAbYura' class=''>电话联系：+86-180-2546-2581
-
-<br/></li></ul></div></body></html>
+/* Addtion Title Style */
+
+.project-bloks-h1 { background-image: linear-gradient(white, white 0.4em, transparent 0.4em, transparent), linear-gradient(to top, white, white 0.38em, transparent 0.38em, transparent), linear-gradient(to right, rgb(180, 220, 232), rgb(180, 220, 232) 100%, transparent 100%, transparent); }
+
+	</style>
+</head>
+    
+<body>
+    <div style="padding:40px 100px;text-align:center;font-weight:bold;font-size:20px;background-color:#ffcf53;color:#000;">This landing page was created in September 2016 and is outdated, for our current status, please go to <a href="/assets/joinus.html">/joinus.html</a></div>
+    <div class="hero-image">
+        <div id="home">
+            <div style="padding-top:50px;" class="hero-overlay">
+                <header id="site-header">
+                    <div class="row">
+                           
+                            </div><!--end row-->
+                        
+                        <div class="main-message-left">  
+                            <div class="container">
+                                <h1 style="font-size:80px;font-weight: 800;" class="flex fadeInUp animated">MAKE YOUR<br>OWN ROBOTS</h1>
+                                <p style="font-family:'Poppins','PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;" class="description-image flex fadeInUp animated">
+                                  「打造你自己的机器人」
+                                </p>
+                                <a class="btn btn-cta-primary btn-cta-blue flex" href="#about" role="button">了解更多</a>
+                            </div><!--end container-->                         
+                        </div><!--end main-message--> 
+                    </header>
+                </div><!--end hero-overlay-->
+            </div><!--end acasa-->
+         </div><!--end hero-image--> 
+
+        <div style="background-color:#f6f8fa;padding-top:40px;" id="about">
+            <!--<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                <img src="http://placehold.it/1440x700" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                <img src="http://placehold.it/1440x700" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                <img src="http://placehold.it/1440x700" alt="Third slide">
+                </div>
+            </div>
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="icon-prev" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="icon-next" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+            </div>-->
+        <section>        
+            <!--<div class="zig-zag container">
+                <div class="row">
+                <div style="margin:50px 10px;background:linear-gradient(135deg, #007fff, #0e73d8);padding:0.2em 1.5em 4em 1.5em;border-radius:10px;box-shadow:0px 0px 50px 10px rgba(0,0,0,.1)" class="title">
+                <h2 style="font-family:'Poppins','PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;color:#fff;" class="flex">我们是谁?</h2>
+                <p style="color:#fff;" style="font-weight:bold;line-height:2em;color:#444;padding-top:10px;" class="description flex">CocoRobo 是一家专注于 STEAM （科学，技术，工程，艺术，数学）的教育科技（EdTech）公司，与全球前沿科技一起，将技术、思考、设计、游戏融入独一无二的创造中，迎接个人制造时代，
+我们不断探索最前沿技术，把最新的理念和技术带到 STEAM 的教育中，把最好的设计，体验带到产品中来。</p>
+            </div>-->
+            <div class="zig-zag container">
+                <div class="row">
+                <div style="background:url(assets/images/geometry_@2X.png) center repeat;border-radius:20px;border:2px #eaeaea solid;margin:50px 10px 0px 10px;padding:0.2em 1.5em 5em 1.5em;" class="title">
+                <h2 style="font-family:'Poppins','PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;color:#222;" class="flex">我们是谁?</h2>
+                <p style="font-family:'Poppins','PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;color:#222;font-weight:regular;line-height:2em;color:#222;padding-top:10px;" class="description flex">CocoRobo 是一家专注于<b style="padding:0.1em 0.5em;border-radiu:4px;background-color:rgba(22,104,255,.75);color:#fff;font-weight:normal;">STEAM （科学，技术，工程，艺术，数学）</b> 的教育科技（EdTech）公司，与全球前沿科技一起，将技术、思考、设计、游戏融入独一无二的创造中，迎接个人制造时代，
+我们不断探索最前沿技术，把最新的理念和技术带到 STEAM 的教育中，把最好的设计，体验带到产品中来。</p>
+            </div><!--end title-->
+            <!--<hr style="margin-top:60px;width:500px;" />-->
+            <!--<div class="title">
+                <h2 style="font-family:'Poppins','PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;" class="flex">科技发展时间线</h2>
+                <p style="line-height:2em;color:#444;padding-top:20px;" class="description flex  ">大约每隔十五年左右，就会迎来一次技术与社会的碰撞。</p>
+            </div>-->
+
+            <!--<div style="font-size: 62.5%;margin: 0; padding: 0; border: 0;font-size: 100%;font: inherit;vertical-align: baseline;display: block;line-height: 1;font-family: "Fira Sans", sans-serif; color: #383838;" class="cd-horizontal-timeline">
+            <div class="timeline">
+                <div class="events-wrapper">
+                    <div class="events">
+                <ol style="list-style-type: none;">
+                    <li><a href="#0" data-date="01/01/1980" class="selected">1985</a></li>
+                    <li><a href="#0" data-date="01/01/1985">1995</a></li>
+                    <li><a href="#0" data-date="01/01/2004">2005</a></li>
+                    <li><a href="#0" data-date="01/01/2007">2015</a></li>
+                    <li><a href="#0" data-date="01/01/2010">2016</a></li>
+                    <li><a href="#0" data-date="01/07/2016">21 世纪</a></li>
+                </ol>
+
+                <span class="filling-line" aria-hidden="true"></span>
+            </div>
+        </div>
+            
+        <ul class="cd-timeline-navigation">
+            <li><a href="#0" class="prev inactive">Prev</a></li>
+            <li><a href="#0" class="next">Next</a></li>
+        </ul>
+    </div>
+
+    <div class="events-content">
+        <ol style="list-style-type: none;">
+            <li class="selected" data-date="01/01/1980">
+                <h2>Personal Computer</h2>
+                <em style="padding-top:20px;">80s, 20 Century</em>
+                <p id="cd-p-smaller"> 
+                    个人电脑的诞生，使它成为普通人能用的产品
+                </p>
+            </li>
+
+            <li data-date="01/01/1985">
+                <h2>Birth of the Internet</h2>
+                <em style="padding-top:20px;">90s, 20 Century</em>
+                <p id="cd-p-smaller"> 
+                    互联网的出现，让人们与世界连结起来
+                </p>
+            </li>
+
+            <li data-date="01/01/2004">
+                <h2>3D Printing</h2>
+                <em style="padding-top:20px;">21 Century</em>
+                <p id="cd-p-smaller"> 
+                    第一款开源桌面 3D 打印机 — RepRap
+                </p>
+            </li>
+
+            <li data-date="01/01/2007">
+                <h2>Augemented Reality</h2>
+                <em style="padding-top:20px;">Year 2015</em>
+                <p id="cd-p-smaller"> 
+                    微软公司推出了跨时代的增强现实产品 — Hololens
+                </p>
+            </li>
+
+            <li data-date="01/01/2010">
+                <h2>Virtual Reality</h2>
+                <em style="padding-top:20px;">Year 2016</em>
+                <p id="cd-p-smaller"> 
+                    将VR和AR作为他们十年计划中的另一个重头戏
+                </p>
+            </li>
+
+            <li data-date="01/07/2016">
+                <h2>Anything is Possible</h2>
+                <em style="padding-top:20px;">Modern Society</em>
+                <p id="cd-p-smaller"> 
+                    随着人工智能、机器人、增强现实、3D打印等新技术的发展，新的技术和设备正在代替人类解决越来越多难题，完成更多专业性的精细工作，改变了我们与世界的交互方式。生产环节中按部就班和机械模仿将逐渐被智能机器所取代，而无法被取代的将是人区别于机器独有的创造力和对新知的探求利用。
+                </p>
+            </li>
+        </ol>
+        </div>-->
+        </div>
+        </section><!--end info-->
+        <!--<hr style="margin-top:0px;width:500px;" />-->
+        <!-- <div style="margin-top:100px;margin-bottom:100px;" class="title">
+                <img src="assets/images/question_1.jpg" />
+                <h2 style="font-size:60px;" class="flex">STATUS QUO</h2>
+                <p style="line-height:2em;color:#444;padding-top:20px;" class="description flex  ">当我们的孩子踏入社会时，70%的工作现在还未被创造出来，
+那么如何应对这么一个快速变化的时代？</p>
+                <p style="line-height:2em;color:#444;padding-top:20px;" class="description flex  ">&darr;</p>
+        </div>-->
+
+        <div>
+        <div id="home">
+            <!--<div style="padding-top:50px;" class="hero-overlay-1">
+                <header>
+                    <div class="row">                           
+                            </div>
+                        <div class="main-message-left">  
+                            <div class="container">
+                                <h1 style="font-family:'Poppins','PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;width:75%;font-weight: 800;line-height:1.5em;" class="flex fadeInUp animated">寓教于乐</h1>
+                                <p style="line-height:2em;" class="description-image flex fadeInUp animated">
+                                  我们通过融合 3D 打印技术，模块化的硬件/软件设计，增强现实技术，<br/>来打造一系列多元化，创新型，寓教于乐的套件产品。
+                                </p>
+                            </div>                   
+                        </div>
+                </header>
+            </div>-->
+
+            <!--<div style="margin-top:20px;margin-bottom:80px;">
+            <div style="background-color:#fde13f;" class="container-fluid full-width">
+            <div id="coco3dp" class="row row-no-gutter">
+                <div style="padding-top:30px;padding-left:30px;padding-bottom:50px;" class="col-xs-12 col-sm-6">
+                    <div class="container">
+                        <h1 style="font-family:'Poppins','PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;width:75%;font-weight: 800;line-height:1.5em;color:#333;" class="flex fadeInUp animated">寓教于乐</h1>
+                        <p style="font-family:'Poppins','PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;line-height:2em;color:#333;width:75%;" class="description-image flex fadeInUp animated">
+                            我们通过融合 3D 打印技术，模块化的硬件/软件设计，增强现实技术，来打造一系列多元化，创新型，寓教于乐的套件产品。
+                        </p>
+                    </div>    
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <img src="assets/images/edutainment.jpg" class="img-full-width" alt="" />  
+                    <div style="margin-top:100px;margin-bottom:100px;" class="title">
+                    <img src="assets/images/question_1.jpg" />
+                    <h2 style="font-size:60px;" class="flex">STATUS QUO</h2>
+                    <p style="line-height:2em;color:#444;padding-top:20px;" class="description flex  ">当我们的孩子踏入社会时，70%的工作现在还未被创造出来，
+那么如何应对这么一个快速变化的时代？</p>
+                <p style="line-height:2em;color:#444;padding-top:20px;" class="description flex  ">&darr;</p>
+                </div>
+            </div>
+            </div>
+            </div>-->
+        
+
+        <!--<div style="background-color:#f7f9fb;padding-bottom:100px;" class="hero-image-2">
+        <div id="home">
+            <div class="hero-overlay-2">
+                <header>
+                    <div class="row">                           
+                            </div>
+                        <div class="main-message-center">  
+                            <div class="container">
+                                <h1 style="color:#222;font-weight: 800;" class="flex fadeInUp animated">寓教于乐</h1>
+                                <h3 style="font-size:2.25em;font-family:'Poppins','PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;color:#222;line-height:1.875em;" class="description-image flex fadeInUp animated">
+                                  通过融合 3D 打印技术，模块化的硬件／软件设计，和以增强现实技术为代表的人机交互，来打造一系列多元化，创新型，寓教于乐的套件产品。
+                                </h3>
+                            </div>
+                        </div>                    
+                    </div>
+                </header>
+            </div>
+        </div>
+        </div>-->
+
+
+
+            <!--<div style="background-color:#fff;padding-top:75px;padding-bottom:50px;" class="title">
+                <h2 style="font-family:'Poppins','PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;" class="flex">动手创造！</h2>
+                <p class="description flex  ">采用 3D 打印技术获得机械零件，把需要用到的模块安装进去，用你喜欢的任何方式进行编程操作（例如 Scratch，Arduino，JavaScript 等），享受玩的乐趣！</p>
+            </div>
+            <div id="howitworks" style="padding-bottom:100px;background-color:#fff;" class="container-fluid full-width">
+                    <div class="row row-no-gutter">
+                    <div class="col-xs-12 col-sm-12">
+                        <img src="assets/images/howitworks.jpg" class="img-full-width" alt="" />    
+                    </div>
+                    </div>
+            </div> -->
+
+            <style>
+            .module_formula {font-weight:500;padding:5px 15px;border-radius:4px;border:1px #1e90ff solid;color:#fff;font-size:16px;margin-right:10px;background-color:#1e90ff;font-family:'Poppins','PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;}
+            </style>
+
+            <div style="padding-top:80px;padding-bottom:70px;background-color:#fff;">
+            <div class="title">
+                <h2 style="20px;line-height:1.5em;font-family:'Poppins','PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;" class="flex">打造属于你自己的机器人！</h2>
+                <div style="padding-top:15px;" class="description flex  ">
+                    <p>
+                        <b class="module_formula">3D 打印</b>+&nbsp;
+                        <b class="module_formula">模块组装</b>+&nbsp;
+                        <b class="module_formula">编程控制</b>+&nbsp;
+                        <b class="module_formula">App 互动</b>
+                    </p>
+                </div>
+            </div>
+            <div style="padding-top:20px;" class="container-fluid full-width">
+            <div id="coco3dp" class="row row-no-gutter">
+               <div style="padding-top:20px;" class="col-xs-12 col-sm-3">
+                    <img src="assets/images/hiw_1.png" class="img-full-width" alt="" /> 
+               </div>
+               <div style="padding-top:20px;" class="col-xs-12 col-sm-3">
+                    <img src="assets/images/hiw_2.png" class="img-full-width" alt="" /> 
+               </div>
+               <div style="padding-top:20px;" class="col-xs-12 col-sm-3">
+                    <img src="assets/images/hiw_3.png" class="img-full-width" alt="" /> 
+               </div>
+               <div style="padding-top:20px;" class="col-xs-12 col-sm-3">
+                    <img src="assets/images/hiw_4.png" class="img-full-width" alt="" /> 
+               </div>
+            </div>
+            </div>
+            </div>
+
+        </div>
+
+
+        </div>
+        </div>
+
+        <!-- <section style="margin-bottom:100px;margin-top:-20px;" id="about" class="marketing-action">
+            <div class="overlay">
+                <div class="text">
+                     <h2 style="color:#fff;line-height:2em;" class="flex  ">大约每隔十五年左右，就会迎来一次技术与社会的碰撞</h2>
+                     <!--<p style="padding-bottom:25px;" class="description-image flex  ">
+                        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                     </p>
+                     <a href="#home" class="btn btn-cta-primary btn-cta-buy" role="button">Go to Top</a>   
+                </div>
+            </div>
+        </section>-->
+            <div id="products">
+                <div class="hero-image-a1">
+            <div id="home">
+            <div style="padding-top:50px;" class="hero-overlay-a1">
+                <header>
+                    <div class="row">                           
+                            </div><!--end row-->
+                        <div class="main-message-left">  
+                            <div class="container">
+                                <h1 style="font-family:'Poppins','PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;font-weight: 800;line-height:1.5em;" class="flex fadeInUp animated">百变模块</h1>
+                                <p style="font-family:'Poppins','PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;line-height:1.75em;width:70%;" class="description-image flex fadeInUp animated">
+                                  我们推出的一系列硬件模块（CocoMod），从负责核心的主控模块，到各种各样的传感器模块，输入输出模块等等。用户利用这些模块，通过不同的组合，可以实现各种功能的产品，从机器人到智能家庭硬件。
+                                </p>
+                            </div><!--end container-->                         
+                        </div><!--end main-message--> 
+                    </header>
+            </div><!--end hero-overlay-->
+            </div><!--end acasa-->
+        </div><!--end hero-image--> 
+            <section class="container">
+                <div style="margin-bottom:60px;" class="row">
+                    <div style="margin-top:75px;" id="cocomod" class="title">
+                        <h2 style="padding-bottom:20px;" class="flex  ">CocoMod</h2>
+                        <!--<p class="description flex  ">我们推出的一系列硬件模块（Coco Mod），从负责核心的主控模块，到各种各样的传感器模块，输入输出模块等等。用户利用这些模块，通过不同的组合，可以实现各种功能的产品，从机器人到智能家庭硬件。</p>-->
+                    </div><!--end title-->
+                    <div>
+                        <div class="row">
+                            <div class="col-md-4 caption flex animated" data-wow-delay="0.2s">
+                                <a href="#howitworks" title=""><img src='assets/images/module_1.png' class="serv" alt="Cursuri" /></a>
+                                <h4 style="padding-top:50px;">主控模块</h4>
+                                <ul>
+                                    <li>Wi-Fi/Bluetooth Ready</li>
+                                    <li>GPIO/ADC/PWM</li>
+                                    <li>SPI/I2C/UART</li>
+                                </ul>
+                            </div><!--end col-sm-6-->
+                            <div class="col-md-4 caption flex animated" data-wow-delay="0.2s">
+                                <a href="#howitworks" title=""><img src='assets/images/module_2.png' class="serv" alt="Cursuri" /></a>
+                                <h4 style="padding-top:50px;">输入类功能模块</h4>
+                                <ul>
+                                    <li>按钮模块，旋钮模块，触控板模块，</li>
+                                    <li>三轴传感模块，音频识别模块，</li>
+                                    <li>摄像头传感模块，移动通信模块，</li>
+                                    <li>Makey Makey</li>
+                                </ul>
+                            </div><!--end col-sm-6-->
+                            <div class="col-md-4 caption flex   animated" data-wow-delay="0.3s">
+                                <a href="#howitworks" title=""><img src='assets/images/module_3.png' class="serv" alt="Cursuri" /></a>
+                                <h4 style="padding-top:50px;">输出类功能模块</h4>
+                                <ul>
+                                    <li>显示模块，电池模块，</li>
+                                    <li>音乐播放模块，电机控制器，</li>
+                                    <li>伺服控制器</li>
+                                </ul>
+                            </div><!--end col-sm-6-->
+                        </div>
+
+                    </div><!--end col-md-6-->
+                   
+                </div><!--end row-->
+            </section>
+
+
+                    <!--<div id="howitworks" style="margin-bottom:100px;background-color:#fff;" class="container-fluid full-width">
+                    <div class="row row-no-gutter">
+                    <div class="col-xs-12 col-sm-12">
+                        <img src="assets/images/howitworks.jpg" class="img-full-width" alt="" />    
+                    </div>
+                    </div>
+                    </div>-->
+
+            <div>
+                <iframe width="100%" height="640px" src="cocomods/index.html" frameborder="0"></iframe>
+            </div>
+
+            <!--<div class="hero-image-3">
+            <div id="home">
+            <div style="padding-top:50px;" class="hero-overlay-3">
+                <header>
+                    <div class="row">                           
+                    </div>
+                        <div class="main-message-left">  
+                            <div class="container">
+                                <h1 style="font-family:'Poppins',Helvetica,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;color:#333;font-weight: 800;" class="flex fadeInUp animated">丰富的组合</h1>
+                                <p style="font-family:'Poppins',Helvetica,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;color:#333;line-height:1.75em;" class="description-image flex fadeInUp animated">
+                                  通过融合3D打印技术，模块化的硬件/软件设计，增强现实技术，<br/>来打造一系列多元化，创新型，寓教于乐的套件产品。
+                                </p>
+                            </div>                    
+                        </div>
+                    </header>
+            </div>
+            </div>
+            </div>-->
+
+                <div class="hero-image-5">
+            <div id="home">
+            <div style="padding-top:50px;" class="hero-overlay-5">
+                <header>
+                    <div class="row">                           
+                            </div><!--end row-->
+                        <div class="main-message-left">  
+                            <div class="container">
+                                <h1 style="font-family:'Poppins','PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;font-weight: 800;line-height:1.5em;" class="flex fadeInUp animated">打印一切！</h1>
+                                <p style="font-family:'Poppins','PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;line-height:1.75em;width:70%;" class="description-image flex fadeInUp animated">
+                                  3D 打印技术经过过去二十多年的发展，已经接近走到成熟期。我们认为，3D 打印技术在教育领域已经足够可用。如火如荼般发展的创客运动和创客空间，让3D打印不再是遥不可及。并且我们有理由相信，随着技术的发展，3D 打印质量会越来越好，成本越来越低。
+                                </p>
+                            </div><!--end container-->                         
+                        </div><!--end main-message--> 
+                    </header>
+            </div><!--end hero-overlay-->
+            </div><!--end acasa-->
+        </div><!--end hero-image--> 
+                <section id="coco3dp" class="container">
+                    <div class="row">
+                    <div id="coco3dp" class="title">
+                        <h2 class="flex ">Coco3DP</h2>
+                        <!--<div style="width:80%;margin:3em 10% 0em 10%;background:linear-gradient(135deg, #FFFFFF, #FFFFFF);padding:1em 1.5em 1em 1.5em;border-radius:10px;" class="title">
+                            <h2 style="font-size:35px;font-family:'Poppins','PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;color:#222;line-height:1.5em;" class="flex">「丰富的 3D 模型库，打印一切！」</h2>
+                        </div>-->
+                        <!--<p class="description flex  ">3D 打印技术经过过去二十多年的发展，已经接近走到成熟期。我们认为，3D 打印技术在教育领域已经足够可用。如火如荼般发展的创客运动和创客空间，让3D打印不再是遥不可及。并且我们有理由相信，随着技术的发展，3D 打印质量会越来越好，成本越来越低。</p>-->
+                    </div><!--end title-->
+
+                    <!--<div class="col-md-6">
+                        <div class="row">
+                            <div class="col-sm-6 caption flex   animated" data-wow-delay="0.1s">
+                                <a href="#" title=""><img src='assets/images/3dp_1.png' class="serv" alt="Cursuri" /></a>    
+                                <a href="#" title=""><h4 style="padding-top:50px;">Coco RoboCar</h4></a>
+                                <p>WiFi / BT ready, GPIO /ADC / PWM, SPI/I2C/UART 以及更多</p>
+                                <a href="#" title="See more" class="more">See more &nbsp;<i class="fa fa-angle-right"></i></a>
+                            </div>
+
+                            <div class="col-sm-6 caption flex animated" data-wow-delay="0.2s">
+                                <a href="#" title=""><img src='assets/images/3dp_2.png' class="serv" alt="Cursuri" /></a>
+                                <h4 style="padding-top:50px;">Coco Drone</h4>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-sm-6 caption flex   animated" data-wow-delay="0.3s">
+                                <a href="#" title=""><img src='assets/images/3dp_5.png' class="serv" alt="Cursuri" /></a>
+                                <a href="#" title=""><h4 style="padding-top:50px;">Coco Doggy</h4></a>
+                            </div>
+
+                            <div class="col-sm-6 caption flex   animated" data-wow-delay="0.4s">
+                                <a href="#" title=""><img src='assets/images/3dp_4.png' class="serv" alt="Cursuri" /></a>
+                                <a href="#" title=""><h4 style="padding-top:50px;">Coco RoboArm</h4></a>
+                            </div>
+                        </div>
+                    </div>-->
+
+
+                </div><!--end row-->
+            </section> 
+
+            <div style="background-color:#fcfcfc;" class="container-fluid full-width">
+            <div id="coco3dp" class="row row-no-gutter">
+               <div style="padding-top:0px;" class="col-xs-12 col-sm-4">
+                    <img src="assets/images/3dp_drone.png" class="img-full-width" alt="" />  
+                     <!--<div>
+                        <h4 style="padding-top:50px;">输出类功能模块</h4>
+                        <ul>
+                            <li>Display, Battery,</li>
+                            <li>MP3 Player, Motor Controller</li>
+                            <li>Servo controller</li>
+                        </ul>
+                    </div>-->
+               </div>
+               <!-- close .col -->
+               <div style="padding-top:0px;" class="col-xs-12 col-sm-4">
+                     <img src="assets/images/3dp_doggy.png" class="img-full-width" alt="" />    
+               </div>
+               <!-- close .col -->
+               <div style="padding-top:0px;" class="col-xs-12 col-sm-4">
+                    <img src="assets/images/3dp_piano_mod.png" class="img-full-width" alt="" />     
+               </div>
+               <!-- close .col -->
+               <div style="padding-top:0px;padding-bottom:50px;" class="col-xs-12 col-sm-4">
+                     <img src="assets/images/3dp_arm.png" class="img-full-width" alt="" /> 
+               </div>
+               <div style="padding-top:0px;padding-bottom:50px;" class="col-xs-12 col-sm-4">
+                     <img src="assets/images/3dp_droid.png" class="img-full-width" alt="" /> 
+               </div>
+               <div style="padding-top:0px;padding-bottom:50px;" class="col-xs-12 col-sm-4">
+                     <img src="assets/images/3dp_more.jpg" class="img-full-width" alt="" /> 
+               </div>
+               <!-- close .col -->
+            </div>
+                <div style="padding-bottom:75px;width:100%;" class="container">
+                        <p style="text-align:center;font-family:'Poppins','PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;line-height:2em;color:#333;width:100%;font-weight:bold;" class="description-image flex fadeInUp animated">
+                            <!--<b unselectable="on" class="bold_dots">&middot;</b>-->免费提供所有的 3D 文件，让用户可以自行修改，打印，组装；<br/>
+                            <!--<b unselectable="on" class="bold_dots">&middot;</b>-->互助的 3D 文件分享社区，加速你的设计；<br/>
+                            <!--<b unselectable="on" class="bold_dots">&middot;</b>-->即将推出质优价廉的 3D 打印服务，敬请期待！
+                        </p>
+                </div>    
+            </div>
+
+        <div class="hero-image-a3">
+            <div id="home">
+            <div style="padding-top:50px;" class="hero-overlay-a3">
+                <header>
+                    <div class="row">                           
+                            </div><!--end row-->
+                        <div class="main-message-left">  
+                            <div class="container">
+                                <h1 style="font-family:'Poppins','PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;font-weight: 800;" class="flex fadeInUp animated">创意套件</h1>
+                                <p style="font-family:'Poppins','PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;line-height:1.75em;width:70%;" class="description-image flex fadeInUp animated">
+                                  精致，轻量级，模块化的STEAM电子套件。我们希望科学的设计与搭配，激发用户无限的创造潜能。启发任何对机器人感兴趣的知识青年一起创造科学教育的未来。
+                                </p>
+                            </div><!--end container-->                         
+                        </div><!--end main-message--> 
+                    </header>
+            </div><!--end hero-overlay-->
+            </div><!--end acasa-->
+        </div><!--end hero-image--> 
+
+            <div style="margin-top:100px;padding-bottom:50px;" class="title">
+                <h2 class="flex">CocoKits</h2>
+                    <!--<p class="description flex  ">精致，轻量级，模块化的STEAM电子套件。我们希望科学的设计与搭配，激发用户无限的创造潜能。启发任何对机器人感兴趣的知识青年一起创造科学教育的未来。-->
+            </div><!--end title-->
+
+            <div style="padding-bottom:100px;background-color:#fff;" class="container-fluid full-width">
+            <div id="coco3dp" class="row row-no-gutter">
+               <div style="padding-top:0px;" class="col-xs-12 col-sm-8">
+                    <img src="assets/images/packn_robot.jpg" class="img-full-width" alt="" />  
+               </div>
+               <!-- close .col -->
+               <div style="padding-top:0px;" class="col-xs-12 col-sm-4">
+                    <div style="width:100%;" class="container">
+                        <h2 style="font-family:'Poppins','PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;width:75%;font-weight:bolder;line-height:1.5em;color:#333;font-size:2.5em;" class="flex fadeInUp animated project-bloks-h1">机器人套件</h2>
+                        <h4 style="font-family:'Poppins','PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;width:75%;font-weight: 800;line-height:1em;color:#333;" class="flex fadeInUp animated">ROBOT KIT</h4>
+                        <p style="margin-top:-10px;margin-bottom:10px;font-family:'Poppins','PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;line-height:1.8em;color:#333;width:90%;font-weight:500;font-size:1.2em;" class="description-image flex fadeInUp animated">
+                           在未来，机器人就如同现在的手机应用一样无处不在，快来制作你的大白吧！
+                        </p>
+                        <div style="width:90%;background-color:rgba(0,0,0,.05);border-radius:4px;padding:20px 20px;font-size:1em;color:#222;line-height:1.8em;font-weight:normal;">
+                            <!--<b unselectable="on" class="bold_dots">&middot;</b>-->机器人套件，提供了双足/四足/无人机/机械臂/小车五大类机器人的模型，硬件，软件，算法。让你从零起步，进入机器人的世界；机器人教育融合了编程、逻辑思维、情境设计、跨学科知识，来全方位的锻炼学生的动手、动脑能力，以及团队协作精神。
+                        </div>
+                        <div style="padding-top:40px;font-size:1em;color:#222;font-weight:bold;">
+                            <b style="padding:2px 10px;border:1px #111 solid;border-radius:4px;">套件包含模块</b>
+                            <div style="width:90%;line-height:1.75em;padding-top:20px;">
+                            <!--<b unselectable="on" class="bold_dots">&middot;</b>-->主控，电机驱动器，舵机驱动器，舵机，电机，3D机械文件
+                            </div>
+                        </div>
+                    </div>
+               </div>
+               <!-- close .col -->
+               <div style="padding-top:0px;" class="col-xs-12 col-sm-8">
+                    <img src="assets/images/packn_led.jpg" class="img-full-width" alt="" />     
+               </div>
+               <!-- close .col -->
+               <div style="" class="col-xs-12 col-sm-4">
+                    <div style="width:100%;" class="container">
+                        <h2 style="font-family:'Poppins','PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;width:75%;font-weight:bolder;line-height:1.5em;color:#333;font-size:2.5em;" class="flex fadeInUp animated project-bloks-h1">灯光套件</h2>
+                        <h4 style="font-family:'Poppins','PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;width:75%;font-weight: 800;line-height:1em;color:#333;" class="flex fadeInUp animated">LIGHTING KIT</h4>
+                        <p style="margin-top:-10px;margin-bottom:10px;font-family:'Poppins','PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;line-height:1.8em;color:#333;width:90%;font-weight:500;font-size:1.2em;" class="description-image flex fadeInUp animated">
+                            探索光与影的美妙，人人都是灯光大师
+                        </p>
+                        <div style="width:90%;background-color:rgba(0,0,0,.05);border-radius:4px;padding:20px 20px;font-size:1em;color:#222;line-height:1.8em;font-weight:normal;">
+                            <!--<b unselectable="on" class="bold_dots">&middot;</b>-->灯光套件，制作属于自己的灯光应用；内置的数十种灯效，配合APP使用，方便你轻松调用为创作增加一份精彩；学习编程技术，制作酷炫好玩的光影效果。
+                        </div>
+                        <div style="padding-top:40px;font-size:1em;color:#222;font-weight:bold;">
+                            <b style="padding:2px 10px;border:1px #111 solid;border-radius:4px;">套件包含模块</b>
+                            <div style="width:90%;line-height:1.75em;padding-top:20px;">
+                            <!--<b unselectable="on" class="bold_dots">&middot;</b>-->主控，灯带，灯柱，灯环，灯点阵屏
+                            </div>
+                        </div>
+                    </div>
+               </div>
+               <!-- close .col -->
+               <div style="padding-top:0px;" class="col-xs-12 col-sm-8">
+                    <img src="assets/images/packn_music.jpg" class="img-full-width" alt="" />     
+               </div>
+               <!-- close .col -->
+               <div style="" class="col-xs-12 col-sm-4">
+                    <div style="width:100%;" class="container">
+                        <h2 style="font-family:'Poppins','PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;width:75%;font-weight:bolder;line-height:1.5em;color:#333;font-size:2.5em;" class="flex fadeInUp animated project-bloks-h1">音乐套件</h2>
+                        <h4 style="font-family:'Poppins','PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;width:75%;font-weight: 800;line-height:1em;color:#333;" class="flex fadeInUp animated">MUSIC KIT</h4>
+                        <p style="margin-top:-10px;margin-bottom:10px;font-family:'Poppins','PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;line-height:1.8em;color:#333;width:90%;font-weight:500;font-size:1.2em;" class="description-image flex fadeInUp animated">
+                            玩音乐不需要乐器，自家厨房就是你的车库乐队，动手来造吧
+                        </p>
+                        <div style="width:90%;background-color:rgba(0,0,0,.05);border-radius:4px;padding:20px 20px;font-size:1em;color:#222;line-height:1.8em;font-weight:normal;">
+                            <!--<b unselectable="on" class="bold_dots">&middot;</b>-->音乐套件，把所有的导电物体（水果，导电金属，人体等）变成触发源，用户通过与之接触，来触发自定义的声音；我们还提供一些列传感器附件，来响应更多种有趣的触发事件：触碰，按压，摇动，甚至包括用户自己定义的方式；学习编程技术，动手创造好玩有趣的音乐
+                        </div>
+                        <div style="padding-top:40px;font-size:1em;color:#222;font-weight:bold;">
+                            <b style="padding:2px 10px;border:1px #111 solid;border-radius:4px;">套件包含模块</b>
+                            <div style="width:90%;line-height:1.75em;padding-top:20px;">
+                            <!--<b unselectable="on" class="bold_dots">&middot;</b>-->主控，按钮，压力传感器，触摸传感器，三轴加速器等
+                            </div>
+                        </div>
+                    </div>
+               </div>
+               <!-- close .col -->
+               <div style="padding-top:0px;" class="col-xs-12 col-sm-8">
+                    <img src="assets/images/packn_iot.jpg" class="img-full-width" alt="" />     
+               </div>
+               <!-- close .col -->
+               <div style="" class="col-xs-12 col-sm-4">
+                    <div style="width:100%;" class="container">
+                        <h2 style="font-family:'Poppins','PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;width:75%;font-weight:bolder;line-height:1.5em;color:#333;font-size:2.5em;" class="flex fadeInUp animated project-bloks-h1">物联网套件</h2>
+                        <h4 style="font-family:'Poppins','PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;width:75%;font-weight: 800;line-height:1em;color:#333;" class="flex fadeInUp animated">INTERNET OF THINGS KIT</h4>
+                        <p style="margin-top:-10px;margin-bottom:10px;font-family:'Poppins','PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;line-height:1.8em;color:#333;width:90%;font-weight:500;font-size:1.2em;" class="description-image flex fadeInUp animated">
+                            快来改造家里的物品吧，<br/>赋予它们神奇的能力。
+                        </p>
+                        <div style="width:90%;background-color:rgba(0,0,0,.05);border-radius:4px;padding:20px 20px;font-size:1em;color:#222;line-height:1.8em;font-weight:normal;">
+                            <!--<b unselectable="on" class="bold_dots">&middot;</b>-->学习基本的通信原理，电子电路知识，编程技术；改造传统设备，对其进行远程管理和控制；利用物联网套件，解决生活中的实际问题
+                        </div>
+                        <div style="padding-top:40px;font-size:1em;color:#222;font-weight:bold;">
+                            <b style="padding:2px 10px;border:1px #111 solid;border-radius:4px;">套件包含模块</b>
+                            <div style="width:90%;line-height:1.75em;padding-top:20px;">
+                            <!--<b unselectable="on" class="bold_dots">&middot;</b>-->温度，光照强度，音量，湿度传感器，空气质量传感器，显示屏，摄像头
+                            </div>
+                        </div>
+                    </div>
+               </div>
+               <!-- close .col -->
+               <div style="padding-top:0px;" class="col-xs-12 col-sm-8">
+                    <img src="assets/images/packn_3dp.jpg" class="img-full-width" alt="" />     
+               </div>
+               <!-- close .col -->
+               <div style="" class="col-xs-12 col-sm-4">
+                    <div style="width:100%;" class="container">
+                        <h2 style="font-family:'Poppins','PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;width:75%;font-weight:bolder;line-height:1.5em;color:#333;font-size:2.5em;" class="flex fadeInUp animated project-bloks-h1">3D 打印套件</h2>
+                        <h4 style="font-family:'Poppins','PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;width:75%;font-weight: 800;line-height:1em;color:#333;" class="flex fadeInUp animated">3D PRINTING KIT</h4>
+                        <p style="margin-top:-10px;margin-bottom:10px;font-family:'Poppins','PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;line-height:1.8em;color:#333;width:90%;font-weight:500;font-size:1.2em;" class="description-image flex fadeInUp animated">
+                            所想即所得，想体验一下造物者的感觉吗？
+                        </p>
+                        <div style="width:90%;background-color:rgba(0,0,0,.05);border-radius:4px;padding:20px 20px;font-size:1em;color:#222;line-height:1.8em;font-weight:normal;">
+                            <!--<b unselectable="on" class="bold_dots">&middot;</b>-->学习3D建模和打印技术；制作个性化的产品
+                        </div>
+                        <div style="padding-top:40px;font-size:1em;color:#222;font-weight:bold;">
+                            <b style="padding:2px 10px;border:1px #111 solid;border-radius:4px;">套件包含模块</b>
+                            <div style="width:90%;line-height:1.75em;padding-top:20px;">
+                            <!--<b unselectable="on" class="bold_dots">&middot;</b>-->3D 打印机，打印线材
+                        </div>
+                        </div>
+                    </div>
+               </div>
+            </div>
+            </div>
+
+            </div>
+            </div>
+
+            
+            
+    <section id="applications">
+
+        <div class="hero-image-a4">
+            <div id="home">
+            <div style="padding-top:50px;" class="hero-overlay-a4">
+                <header>
+                    <div class="row">                           
+                            </div><!--end row-->
+                        <div class="main-message-left">  
+                            <div class="container">
+                                <h1 style="font-family:'Poppins','PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;font-weight: 800;" class="flex fadeInUp animated">多彩应用</h1>
+                                <p style="font-family:'Poppins','PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;line-height:1.75em;width:70%;" class="description-image flex fadeInUp animated">
+                                  结合我们的套件产品，我们开发了一系列有趣的应用；<br/>在趣味的应用中将你的想法，与 CocoRobo 一起学习编程、操控
+                                </p>
+                            </div><!--end container-->                         
+                        </div><!--end main-message--> 
+                    </header>
+            </div><!--end hero-overlay-->
+            </div><!--end acasa-->
+        </div><!--end hero-image--> 
+
+        <div class="container">
+            <div style="margin-top:100px;padding-bottom:0px;" class="title">
+                <h2 style="font-family:'Poppins','PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;" class="flex">CocoApps</h2>
+                <p style="font-family:'Poppins','PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;" class="description flex  ">我们对多个平台进行了 SDK 匹配，选择你最熟悉或喜欢的平台进行创作</p>
+            </div><!--end title-->
+
+            <!--<div style="padding-bottom:25px;" class="title"><h4 style="border:2px #1e90ff solid;font-weight:bolder;color:#1e90ff;padding:1em;" class="flex">桌面版应用</h4></div>-->
+                <div style="padding-top:50px;padding-bottom:100px;text-align:center;"><img src="assets/images/supported_platform.jpg"></div>
+           
+                <div class="row">
+                    <div class="col-md-4 caption flex   animated" data-wow-delay="0.1s">
+                        <img src="assets/images/app_duino.png" />
+                        <h3 style="padding-top:20px;">Cocoduino</h3>
+                        <p>这是一款桌面版的APP，兼容当今世界最流行的Arduino开发环境，丰富的资源和技术支持，适合14岁以上儿童。</p>          
+                    </div><!--end col-md-4-->    
+                
+                <div class="col-md-4 caption flex   animated" data-wow-delay="0.3s">
+                        <img src="assets/images/app_scratch.png" />
+                        <h3 style="padding-top:20px;">Coco Scratch</h3>
+                        <p>一款图形化编程平台，敲击一下鼠标便能完成一个简单的项目，适合8-16岁儿童。</p>          
+                </div><!--end col-md-4-->    
+                
+                <div class="col-md-4 caption flex   animated" data-wow-delay="0.5s">
+                        <img src="assets/images/app_motion.png" />
+                        <h3 style="padding-top:20px;">Coco Leap Motion</h3>
+                        <p>这是一款桌面版的APP，通过它来实现Leap motion对机器人的控制，完成更多有趣好玩的操作。</p>         
+                </div><!--end col-md-4-->   
+
+            </div><!--end row-->
+
+                <!--<div style="padding-bottom:25px;" class="title"><h4 style="border:2px #1e90ff solid;font-weight:bolder;color:#1e90ff;padding:1em;" class="flex">移动版应用</h4></div>-->
+           
+                <div class="row">
+                    <div class="col-md-4 caption flex   animated" data-wow-delay="0.1s">
+                        <img src="assets/images/app_playground.png" />
+                        <h3 style="padding-top:20px;">Coco Playground</h3>
+                        <p>这是一款结合AR技术的趣味性编程手机APP，借助实体的积木以及屏幕上的动画，引导小朋友去学习和理解编程，适合6-10岁儿童。</p>          
+                    </div><!--end col-md-4-->    
+                
+                <div class="col-md-4 caption flex   animated" data-wow-delay="0.3s">
+                        <img src="assets/images/app_go_motor.png" />
+                        <h3 style="padding-top:20px;">Coco Go</h3>
+                        <p>这是一款用于控制机器人运动的手机APP，支持多达4路电机和12路舵机的控制，同时可以通过预编程的方式为每款机器人设定各自的运动学算法。</p>          
+                </div><!--end col-md-4-->    
+                
+                <div class="col-md-4 caption flex   animated" data-wow-delay="0.5s">
+                        <img src="assets/images/app_battle.png" />
+                        <h3 style="padding-top:20px;">Coco Battle</h3>
+                        <p>这是一款结合AR技术的趣味性游戏APP，支持多达3位用户，6台机器人的对战平台，让小朋友可以玩中学。</p>         
+                </div><!--end col-md-4-->   
+
+            </div><!--end row-->
+            <div class="row">
+                    <div class="col-md-4 caption flex   animated" data-wow-delay="0.1s">
+                        <img src="assets/images/app_music.png" />
+                        <h3 style="padding-top:20px;">Coco Music</h3>
+                        <p>这是一款跟音乐套件配合使用的手机APP，内置多款电子乐器，如钢琴，吉他，架子鼓等。</p>          
+                    </div><!--end col-md-4-->    
+                
+                <div class="col-md-4 caption flex   animated" data-wow-delay="0.3s">
+                        <img src="assets/images/app_blink.png" />
+                        <h3 style="padding-top:20px;">Coco Blink</h3>
+                        <p>这是一款跟灯光套件配合使用的手机APP，可以用它来控制LED点阵屏的亮度，颜色，图案，以及进行趣味性互动。</p>          
+                </div><!--end col-md-4-->    
+                
+                <div class="col-md-4 caption flex   animated" data-wow-delay="0.5s">
+                        <img src="assets/images/app_hub.png" />
+                        <h3 style="padding-top:20px;">Coco Hub</h3>
+                        <p>这是一款跟物联网套件配合使用的手机APP，用它可以实时汇总和监测传感器上的信息，并且可以用过编程的方式实现多个传感器节点之前的互动。</p>         
+                </div><!--end col-md-4-->  
+            </div>
+        </div>
+            </div><!--end container-->
+
+            <!--<div style="margin-top:20px;" class="title">
+                <h2 style="font-family:'Poppins','PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;" class="flex">How it Works?</h2>
+                <p class="description flex  ">采用3D打印技术获得机械零件，把需要用到的模块安装进去，用你喜欢的任何方式进行编程操作（例如 Scratch，Arduino，JavaScript 等），最后，请享受玩的乐趣吧！</p>
+            </div>-->
+
+
+        </section>
+
+        <div id="features">
+
+
+
+            <!--<div class="hero-image-a6">
+            <div id="home">
+            <div style="padding-top:50px;" class="hero-overlay-a6">
+                <header>
+                    <div class="row">                           
+                            </div>
+                        <div class="main-message-left">  
+                            <div class="container">
+                                <h1 style="font-family:'Poppins','PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;font-weight: 800;" class="flex fadeInUp animated">特色</h1>
+                                <p style="line-height:1.75em;width:70%;" class="description-image flex fadeInUp animated">
+                                    你买的并不是一款普通的电子类产品，你买的是未来。
+                                </p>
+                            </div>                        
+                        </div>
+                    </header>
+            </div>
+            </div>
+            </div>-->
+
+            <div style="margin-bottom:0px;">
+            <div style="background-color:#fff;" class="container-fluid full-width">
+            <div id="coco3dp" class="row row-no-gutter">
+               <!-- close .col -->
+                <div class="col-xs-12 col-sm-6">
+                    <video style="right:10%;" poster="assets/plug_play_pos.jpg" class="img-full-width" autoplay loop>
+                    <source src="assets/plug_play.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video> 
+                    <!--<div style="margin-top:100px;margin-bottom:100px;" class="title">
+                    <img src="assets/images/question_1.jpg" />
+                    <h2 style="font-size:60px;" class="flex">STATUS QUO</h2>
+                    <p style="line-height:2em;color:#444;padding-top:20px;" class="description flex  ">当我们的孩子踏入社会时，70%的工作现在还未被创造出来，
+那么如何应对这么一个快速变化的时代？</p>-->
+                <!--<p style="line-height:2em;color:#444;padding-top:20px;" class="description flex  ">&darr;</p>-->
+                </div><!--end title-->
+
+                <div class="col-xs-12 col-sm-6">
+                    <img src="assets/images/feature_combination.jpg" class="img-full-width" alt="" />  
+                </div>
+            </div>
+               <!-- close .col -->
+            </div>
+            </div>
+
+            <div style="margin-top:-10px;margin-bottom:0px;">
+            <div style="background-color:#fff;" class="container-fluid full-width">
+            <div id="coco3dp" class="row row-no-gutter">
+                <div class="col-xs-12 col-sm-6">
+                    <img src="assets/images/feature_ardemo.jpg" class="img-full-width" alt="" />  
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <img src="assets/images/feature_edutainment.jpg" class="img-full-width" alt="" />  
+                </div>
+            </div>
+               <!-- close .col -->
+            </div>
+            </div>
+
+            <div style="margin-top:0px;margin-bottom:0px;">
+            <div style="background-color:#fff;" class="container-fluid full-width">
+            <div id="coco3dp" class="row row-no-gutter">
+                <div class="col-xs-12 col-sm-6">
+                    <img src="assets/images/feature_gadgets.jpg" class="img-full-width" alt="" />  
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <img src="assets/images/feature_cloud.png" class="img-full-width" alt="" />  
+                </div>
+            </div>
+               <!-- close .col -->
+            </div>
+            </div>
+
+        </div>
+         
+        <section style="margin-top:-8px;" id="education">      
+
+        <div class="hero-image-a5">
+            <div id="home">
+            <div style="padding-top:50px;" class="hero-overlay-a5">
+                <header>
+                    <div class="row">                           
+                            </div><!--end row-->
+                        <div class="main-message-left">  
+                            <div class="container">
+                                <h1 style="font-family:'Poppins','PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;font-weight: 800;" class="flex fadeInUp animated">一站式 STEAM 教育</h1>
+                                <p style="line-height:1.75em;width:70%;" class="description-image flex fadeInUp animated">
+                                  我们提供一站式的 STEAM 教育解决方案，包括课程开发、课程传授、实验室设计、套件提供、知识内容提供等。我们坚信，科学教育在教会学生科学知识的同时，能够最好地鼓励学生的好奇心，激发探索欲望，培养良好的学习习惯。
+                                </p>
+                            </div><!--end container-->                         
+                        </div><!--end main-message--> 
+                    </header>
+            </div><!--end hero-overlay-->
+            </div><!--end acasa-->
+        </div><!--end hero-image--> 
+
+            <div style="margin" class="zig-zag container">
+                <div class="row">
+                    <div class="title">
+                <h2 class="flex">Coco Education</h2>
+                <!--<p style="margin-bottom:-100px;line-height:2em;" class="description flex  ">我们提供一站式的STEAM教育解决方案，包括课程开发、课程传授、实验室设计、套件提供、知识内容提供等。我们坚信，科学教育在教会学生科学知识的同时，能够最好地鼓励学生的好奇心，激发探索欲望，培养良好的学习习惯。</p>-->
+            </div><!--end title-->
+            </div><!--end row-->
+            </div><!--end zig-zag-->
+
+            <!--<hr style="color:#ccc;margin-top:0px;width:500px;margin-bottom:50px;" />-->
+
+            <style>.bold_dots{padding-right:10px;-webkit-user-select: none; -moz-user-select: none; -ms-user-select: none;}</style>
+            <div style="margin-top:0px;margin-bottom:0px;">
+            <div style="background-color:#fff;" class="container-fluid full-width">
+            <div id="coco3dp" class="row row-no-gutter">
+                <div style="padding-top:3rem;padding-left:22px;padding-bottom:20px;" class="col-xs-12 col-sm-6">
+                    <div style="width:100%;" class="container">
+                        <h2 style="font-family:'Poppins','PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;width:90%;font-weight: 800;line-height:1.25em;color:#333;" class="flex fadeInUp animated">组装，学习，玩乐</h2>
+                        <p style="font-family:'Poppins','PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;line-height:2.2em;color:#333;width:90%;font-size:1.55rem;font-weight:normal;" class="description-image flex fadeInUp animated">
+                            <b unselectable="on" class="bold_dots">&middot;</b>标准化的模块接口，丰富的产品形态，完整的组装教程；<br/>
+                            <b unselectable="on" class="bold_dots">&middot;</b>从0到1的进阶学习教程，上百个趣味编程项目，逐步成长为技术达人；<br/>
+                            <b unselectable="on" class="bold_dots">&middot;</b>推出趣味游戏，结合机器人和增强现实，实现寓教于乐
+                        </p>
+                    </div>
+                </div>
+               <!-- close .col -->
+                <div class="col-xs-12 col-sm-6 ">
+                    <img src="assets/images/edu_1.gif" class="img-full-width" alt="" />  
+                </div><!--end title-->
+                <div style="padding-top:3rem;padding-left:22px;padding-bottom:20px;" class="col-xs-12 col-sm-6">
+                    <div style="width:100%;" class="container">
+                        <h2 style="font-family:'Poppins','PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;width:75%;font-weight: 800;line-height:1.25em;color:#333;" class="flex fadeInUp animated">丰富的课程设计</h2>
+                        <p style="font-family:'Poppins','PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;line-height:2.2em;color:#333;width:90%;font-size:1.55rem;font-weight:normal;padding-right:20px;" class="description-image flex fadeInUp animated">
+                            <b unselectable="on" class="bold_dots">&middot;</b>我们提供机器人、灯光、音乐及智能家居四大课程；<br/>
+                            <b unselectable="on" class="bold_dots">&middot;</b>适用各种层次的教学大纲，超过100个课时的课程，从基础到进阶的技术指导，以及内容详实的教师手册和学生教材；<br/>
+                            <b unselectable="on" class="bold_dots">&middot;</b>提供科学化的考核体系，便于教师掌握学习质量；<br/>
+                            <b unselectable="on" class="bold_dots">&middot;</b>游戏化融入课堂教学，引入奖励机制，激发学生兴趣
+                        </p>
+                    </div>    
+                </div>
+               <!-- close .col -->
+                <div class="col-xs-12 col-sm-6">
+                    <img src="assets/images/edu_2.jpg" class="img-full-width" alt="" />  
+                </div><!--end title-->
+                <div style="padding-top:3rem;padding-left:22px;padding-bottom:20px;" class="col-xs-12 col-sm-6">
+                    <div style="width:100%;" class="container">
+                        <h2 style="font-family:'Poppins','PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;width:75%;font-weight: 800;line-height:1.25em;color:#333;" class="flex fadeInUp animated">STEAM 实验室</h2>
+                        <p style="font-family:'Poppins','PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;line-height:2.2em;color:#333;width:90%;font-size:1.55rem;font-weight:normal;padding-right:20px;" class="description-image flex fadeInUp animated">
+                            <b unselectable="on" class="bold_dots">&middot;</b>提供标准化的模块接口及组装教程，轻松搭建出丰富的产品形态；<br/>
+                            <b unselectable="on" class="bold_dots">&middot;</b>通过上百个趣味编程项目，一步一步成长为技术达人；<br/>
+                            <b unselectable="on" class="bold_dots">&middot;</b>首创增强现实机器人游戏，边玩边学，激发兴趣
+                        </p>
+                    </div>    
+                </div>
+               <!-- close .col -->
+                <div class="col-xs-12 col-sm-6">
+                    <img src="assets/images/edu_3.jpg" class="img-full-width" alt="" />  
+                </div><!--end title-->
+
+
+            </div>
+               <!-- close .col -->
+            </div>
+            </div>
+            <hr style="margin-top:0px;" />
+
+            <div style="padding-top:75px;font-family:'Poppins','PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;" class="title">
+                <h2 style="font-size:40px;" class="flex">合作院校</h2>
+                <!--<p style="margin-bottom:-100px;line-height:2em;" class="description flex  ">我们提供一站式的STEAM教育解决方案，包括课程开发、课程传授、实验室设计、套件提供、知识内容提供等。我们坚信，科学教育在教会学生科学知识的同时，能够最好地鼓励学生的好奇心，激发探索欲望，培养良好的学习习惯。</p>-->
+            </div><!--end title-->
+
+            <div style="padding-bottom:100px;background-color:#fff;" class="container-fluid full-width">
+            <div id="coco3dp" class="row row-no-gutter">
+               <div style="padding-top:20px;" class="col-xs-2 col-sm-2">
+                    <img src="" class="img-full-width" alt="" /> 
+               </div>
+               <div style="padding-top:20px;" class="col-xs-2 col-sm-2">
+                    <img src="assets/images/college_collab_cuhk.jpg" class="img-full-width" alt="" /> 
+               </div>
+               <!-- close .col -->
+               <div style="padding-top:20px;" class="col-xs-2 col-sm-2">
+                     <img src="assets/images/college_collab_cuhksz.jpg" class="img-full-width" alt="" />    
+               </div>
+               <!-- close .col -->
+               <div style="padding-top:20px;" class="col-xs-2 col-sm-2">
+                    <img src="assets/images/college_collab_thu.jpg" class="img-full-width" alt="" />     
+               </div>
+               <!-- close .col -->
+               <div style="padding-top:20px;" class="col-xs-2 col-sm-2">
+                     <img src="assets/images/college_collab_beiyou.jpg" class="img-full-width" alt="" /> 
+               </div>
+               <!-- close .col -->
+               <div style="padding-top:20px;" class="col-xs-2 col-sm-2">
+                    <img src="" class="img-full-width" alt="" /> 
+               </div>
+            </div>
+            </div>
+
+        </section><!--end info-->
+
+
+        <div id="outlook">
+            <!--<div class="hero-image-q1">
+            <div id="home">
+            <div style="padding-top:50px;" class="hero-overlay-q1">
+                <header>
+                    <div class="row">                           
+                            </div>
+                        <div class="main-message-left">  
+                            <div class="container">
+                                <h1 style="font-weight: 800;" class="flex fadeInUp animated">Mind and Hand</h1>
+                                <p style="line-height:1.75em;" class="description-image flex fadeInUp animated">
+                                  MIT Motto
+                                </p>
+                            </div>                  
+                        </div>
+                    </header>
+                </div>
+            </div>
+            </div>-->
+
+            <!-- Carousel
+                ____ ____ ____ ____ _  _ ____ ____ _
+                |    |__| |__/ |  | |  | [__  |___ |
+                |___ |  | |  \ |__| |__| ___] |___ |___ 
+            -->
+            
+            <div>
+                <iframe width="100%" height="620px" src="assets/css/carousel.html" frameborder="0"></iframe>
+            </div>
+            
+            <!--<div id="carousel-example" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example" data-slide-to="1"></li>
+                <li data-target="#carousel-example" data-slide-to="2"></li>
+              </ol>
+
+              <div class="carousel-inner">
+                <div class="item active">
+                  <a href="#"><img src="http://placekitten.com/1600/600" /></a>
+                  <div class="carousel-caption">
+                    <h3>Meow</h3>
+                    <p>Just Kitten Around</p>
+                  </div>
+                </div>
+                <div class="item">
+                  <a href="#"><img src="http://placekitten.com/1600/600" /></a>
+                  <div class="carousel-caption">
+                    <h3>Meow</h3>
+                    <p>Just Kitten Around</p>
+                  </div>
+                </div>
+                <div class="item">
+                  <a href="#"><img src="http://placekitten.com/1600/600" /></a>
+                  <div class="carousel-caption">
+                    <h3>Meow</h3>
+                    <p>Just Kitten Around</p>
+                  </div>
+                </div>
+              </div>
+
+              <a class="left carousel-control" href="#carousel-example" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+              </a>
+              <a class="right carousel-control" href="#carousel-example" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+              </a>
+            </div>-->
+
+            <!-- Carousel
+                ____ ____ ____ ____ _  _ ____ ____ _
+                |    |__| |__/ |  | |  | [__  |___ |
+                |___ |  | |  \ |__| |__| ___] |___ |___ 
+            -->
+
+        </div>
+
+        <section id="team">
+            <div style="margin-top:10px;padding-bottom:100px;" class="container">
+                    <div class="title">
+                        <h2 style="font-family:'Poppins','PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;" class="flex animated">Team</h2>
+                        <p style="margin-top:-20px;padding-bottom:50px;" class="description flex   animated">Made by Innovators & Dreamers<br/>and for Innovators & Dreamers.</p>
+                    </div><!--end title-->
+            
+                    <div class="row"> 
+                        <div class="col-md-6">
+                            <div class="row">    
+                                <div class="price-table col-sm-6 flex  " data-wow-delay="0.1s">
+                                    <img style="padding-bottom:20px;" src="assets/images/team_member_1.png" />
+                                    <h6>Chief Executive Officer</h6>
+                                    <span class="price">Tony</span>
+
+                                    <p class="features">
+                                        Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. us blandit si us blandit si.
+                                    </p>
+                                </div><!--price-table-->
+
+                                <div class="price-table col-sm-6 flex  " data-wow-delay="0.3s">
+                                    <img style="padding-bottom:20px;" src="assets/images/team_member_2.png" />
+                                    <h6>Chief Marketing Officer</h6>
+                                    <span class="price">Syan</span>
+
+                                    <p class="features">
+                                        Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+                                    </p>
+                                </div><!--price-table-->
+                                
+                            </div><!--end row-->    
+                        </div><!--end col-sm-6-->        
+        
+
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="price-table col-sm-6 flex  " data-wow-delay="0.5s">
+                                    <img style="padding-bottom:20px;" src="assets/images/team_member_1.png" />
+                                    <h6>Chief Technology Officer</h6>
+                                    <span class="price">Tommy</span>
+
+                                    <p class="features">
+                                        Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.amet fermentum. amet fermentum. http://devd.io:8000/
+                                    </p>
+
+                                </div><!--price-table-->
+
+                                <div class="price-table col-sm-6 flex  " data-wow-delay="0.7s">
+                                    <img style="padding-bottom:20px;" src="assets/images/team_member_1.png" />
+                                    <h6>Mechanical Engineer</h6>
+                                    <span class="price">Conan</span>
+
+                                    <p class="features">
+                                        Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.amet fermentum.amet. http://devd.io:8000/
+                                    </p>
+                                </div><!--price-table-->
+                            </div><!--end row--> 
+                        </div><!--end col-sm-6-->                            
+                    </div><!--end row-->
+
+                    <div class="row"> 
+                        <div class="col-md-6">
+                            <div class="row">    
+                                <div class="price-table col-sm-6 flex  " data-wow-delay="0.1s">
+                                    <img style="padding-bottom:20px;" src="assets/images/team_member_1.png" />
+                                    <h6>Mechanical Engineer</h6>
+                                    <span class="price">Jake</span>
+
+                                    <p class="features">
+                                        Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. us blandit si us blandit si.
+                                    </p>
+                                </div><!--price-table-->
+
+                                <div class="price-table col-sm-6 flex  " data-wow-delay="0.3s">
+                                    <img style="padding-bottom:20px;" src="assets/images/team_member_1.png" />
+                                    <h6>Electrical Engineer</h6>
+                                    <span class="price">Junfeng</span>
+
+                                    <p class="features">
+                                        Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+                                    </p>
+                                </div><!--price-table-->
+                                
+                            </div><!--end row-->    
+                        </div><!--end col-sm-6-->        
+        
+
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="price-table col-sm-6 flex  " data-wow-delay="0.5s">
+                                    <img style="padding-bottom:20px;" src="assets/images/team_member_1.png" />
+                                    <h6>Electrical Engineer</h6>
+                                    <span class="price">Wen</span>
+
+                                    <p class="features">
+                                        Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.amet fermentum.amet fermentum. 
+                                    </p>
+
+                                </div><!--price-table-->
+
+                                <div class="price-table col-sm-6 flex  " data-wow-delay="0.7s">
+                                    <img style="padding-bottom:20px;" src="assets/images/team_member_2.png" />
+                                    <h6>WE'RE HIRING!</h6>
+                                    <span style="color:#ccc;" class="price">More</span>
+
+                                    <p class="features">
+                                        Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.amet fermentum.amet.
+                                    </p>
+                                </div><!--price-table-->
+                            </div><!--end row--> 
+                        </div><!--end col-sm-6-->                            
+                    </div><!--end row-->
+
+            </div><!--end container-->                                       
+        </section><!--end plan-->     
+
+        <section id="contact" class="marketing-action">
+            <div class="overlay">
+                <div class="text">
+                     <h2 style="color:#fff;" class="flex ">The Future of STEAM Education is Now</h2>
+                     <p style="padding-bottom:30px;" class="description-image flex  ">
+                        CocoRobo is made for Dreamers & Innovators.
+                     </p>
+                     <a href="#home" class="btn btn-cta-primary btn-cta-blue btn-cta-buy" role="button">返回顶部</a>      
+                </div><!--end text-->   
+            </div><!--end overlay-->    
+        </section><!--end marketing-action-->
+                                           
+
+       <div id="footer">                                      
+       <div class="container">
+            <div class="row">
+                    <div class="footer-section col-md-1">
+                        <a href="#" title="Home is where the heart is" rel="home"><img src='assets/images/flexible-logo-footer.png' class="logo-footer flex  " alt="Home is where the heart is"></a>
+                    </div><!--end footer-section-->
+                    
+                    <div class="footer-section col-md-8 col-sm-9 col-xs-12">
+                            <p class="copyright flex  ">&#169; Copyright 2016 <strong>CocoRobo.</strong>&nbsp;All rights reserved.</p>
+                    </div><!--end footer-section-->
+                        
+                        
+                    <!-- <div class="footer-section col-md-3 col-xs-12">    
+                        <div class="social copyright flex  ">
+                            <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+                            <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
+                            <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>  -->
+            </div><!--end row-->
+        </div><!--end container-->
+        </div><!--end footer-->
+	<!-- End demo purposes only -->
+
+
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js?ver=1.0'></script>
+<script type='text/javascript' src='assets/js/bootstrap.min.js'></script>
+<!--<script type='text/javascript' src='assets/js/jquery-mobile.js?ver=1.0'></script>-->
+<script type='text/javascript' src="assets/js/wow.min.js"></script>
+<script type='text/javascript' src="assets/js/main.js"></script>
+<script type='text/javascript' src="assets/js/additional/modernizr.js"></script> <!-- Modernizr -->
+<!--<script type='text/javascript' src="assets/js/additional/jquery-2.1.4.js"></script>-->
+<!--<script type='text/javascript' src="assets/js/additional/jquery.mobile.custom.min.js"></script>-->
+<script type='text/javascript' src="assets/js/additional/main.js"></script> <!-- Resource jQuery -->
+<script type='text/javascript' src="assets/js/additional/snap.svg-min.js"></script>
+<!--<script type='text/javascript' src="assets/js/additional/snap_main.js"></script>-->
+<script language="JavaScript" type="text/javascript">
+  $(document).ready(function(){
+    $('.carousel').carousel({
+      interval: 1000
+    })
+  });    
+</script>
+<script>
+//jQuery transitions init(wow + animated)
+wow = new WOW(
+    {
+        boxClass: 'flex',
+        animateClass: 'animated', // default
+        offset: 0,          // default
+        mobile: true,       // default
+        live: true        // default
+    }
+    )
+wow.init();
+</script>
+<script type="text/javascript" src="assets/js/jQuery.style.switcher.js"></script>
+				<script type="text/javascript">
+			$(function(){
+			$('#colour-variations ul').styleSwitcher({
+				defaultThemeId: 'flexible-switch',
+				hasPreview: false,
+				cookie: {
+		          	expires: 30,
+		          	isManagingLoad: true
+		      	}
+			});	
+			$('.option-toggle').click(function() {
+				$('#colour-variations').toggleClass('sleep');
+			});
+		});
+		</script>
+                <script>
+            $(document).ready(function(){
+                $('.carousel').carousel({
+                  interval: 2000
+                    });
+            });
+        </script>
+</body>
